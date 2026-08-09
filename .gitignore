@@ -1,0 +1,8 @@
+logs/
+downloads/
+edited/
+data/*_cookies.json
+__pycache__/
+*.pyc
+cloud_profile/
+automation_profiles/
