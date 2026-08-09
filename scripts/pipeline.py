@@ -26,6 +26,9 @@ import singleton_lock
 from video_editor import edit_video
 from yt_uploader import upload_and_schedule
 
+if __import__("os").environ.get("YT_UPLOAD_MODE") == "api":
+    from api_uploader import upload_and_schedule_api as upload_and_schedule
+
 CSV_PATH = ROOT.parent / "data" / "reels.csv"
 DOWNLOADS = ROOT.parent / "downloads"
 EDITED = ROOT.parent / "edited"
@@ -302,10 +305,13 @@ def process_one(candidate, video_num: int, schedule_dt, batch_num: int,
         edit_video(downloaded_path, edited_path, series_name, trim_start=trim_start)
         log(f"  edited: {edited_path}")
 
-        link = upload_and_schedule(
-            edited_path, video_title, series_name, schedule_date, schedule_time,
-            headless=headless, channel=channel, cookies_json=yt_cookies,
-        )
+        if os.environ.get("YT_UPLOAD_MODE") == "api":
+            link = upload_and_schedule(edited_path, video_title, series_name, schedule_dt)
+        else:
+            link = upload_and_schedule(
+                edited_path, video_title, series_name, schedule_date, schedule_time,
+                headless=headless, channel=channel, cookies_json=yt_cookies,
+            )
         yt_id = extract_video_id(link)
         log(f"  uploaded+scheduled: {link or '(link not captured)'}")
 
@@ -370,11 +376,17 @@ def main():
     parser.add_argument("--channel", default="chrome",
                         help="chrome (local) or chromium (cloud runner)")
     parser.add_argument("--headless", action="store_true")
+    parser.add_argument("--yt-upload-mode", choices=["browser", "api"], default="browser",
+                        help="browser: Studio via cookies/profile; api: Data API OAuth")
     parser.add_argument("--yt-cookies", type=str, default=None,
                         help="Playwright-format cookie JSON (cloud mode)")
     parser.add_argument("--fb-cookies", type=str, default=None,
                         help="Playwright-format cookie JSON (cloud mode)")
     args = parser.parse_args()
+
+    if args.yt_upload_mode == "api":
+        os.environ["YT_UPLOAD_MODE"] = "api"
+        log("Upload mode: YouTube Data API (OAuth).")
 
     if args.start_from_csv:
         rows0 = load_rows()

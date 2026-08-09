@@ -23,6 +23,8 @@ jobs:
       RUN_TYPE: claims
       YT_COOKIES: ${{ secrets.YT_COOKIES }}
       FB_COOKIES: ${{ secrets.FB_COOKIES }}
+      GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+      GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -41,7 +43,10 @@ jobs:
 
       - name: Run claims checker
         shell: pwsh
-        run: python cloud/worker_run.py
+        run: |
+          New-Item -ItemType Directory -Force -Path logs | Out-Null
+          python cloud/worker_run.py 2>&1 | Tee-Object -FilePath "logs/run_claims_$(Get-Date -Format 'yyyyMMdd_HHmmss').log"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
       - name: Commit state (reels.csv + logs)
         shell: pwsh

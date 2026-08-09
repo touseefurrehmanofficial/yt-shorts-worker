@@ -34,6 +34,8 @@ def run(cmd: list[str]) -> int:
 def main():
     write_secret_cookies()
     py = sys.executable
+    api_available = bool(os.environ.get("GOOGLE_REFRESH_TOKEN") and
+                         os.environ.get("GOOGLE_CLIENT_SECRET"))
     if RUN_TYPE == "upload":
         args = [
             str(py), str(ROOT / "scripts" / "pipeline.py"),
@@ -44,12 +46,28 @@ def main():
             "--yt-cookies", str(YT_COOKIES),
             "--fb-cookies", str(FB_COOKIES),
         ]
+        if api_available:
+            args += ["--yt-upload-mode", "api"]
+            print("[worker] using YouTube Data API uploader (OAuth token present)",
+                  flush=True)
+        else:
+            print("[worker] no OAuth token -- falling back to browser upload "
+                  "(expected to fail from GitHub IPs)", flush=True)
     elif RUN_TYPE == "claims":
-        args = [
-            str(py), str(ROOT / "scripts" / "claims_checker.py"),
-            "--delete",
-            "--cookies", str(YT_COOKIES),
-        ]
+        if api_available:
+            args = [
+                str(py), str(ROOT / "scripts" / "api_delete.py"),
+            ]
+            print("[worker] claims run via YouTube Data API (flagged_videos.csv)",
+                  flush=True)
+        else:
+            args = [
+                str(py), str(ROOT / "scripts" / "claims_checker.py"),
+                "--delete",
+                "--cookies", str(YT_COOKIES),
+            ]
+            print("[worker] no OAuth token -- falling back to browser claims "
+                  "checker (expected to fail from GitHub IPs)", flush=True)
     else:
         raise SystemExit(f"Unknown RUN_TYPE: {RUN_TYPE!r}")
     code = run(args)

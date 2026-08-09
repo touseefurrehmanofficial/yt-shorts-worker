@@ -34,7 +34,33 @@ from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parent.parent
 YT_PROFILE = ROOT / "automation_profiles" / "youtube_profile"
 CSV_PATH = ROOT / "data" / "reels.csv"
+FLAGGED_PATH = ROOT / "data" / "flagged_videos.csv"
 CHANNEL_ID = "UCoGgFOYfAYqvSWkctlEWKcA"
+
+FLAGGED_FIELDS = ["video_id", "title", "notice", "detected_at"]
+
+
+def _append_flagged(video_id: str, title: str, notice: str):
+    """Record a newly found flagged video so the cloud claims run (api_delete,
+    YouTube Data API) can delete it -- the API can't see Studio's Notices
+    column, so detection happens here and deletion happens there."""
+    try:
+        rows = []
+        if FLAGGED_PATH.exists():
+            with open(FLAGGED_PATH, newline="", encoding="utf-8") as f:
+                rows = [r for r in csv.DictReader(f)]
+        if any(r.get("video_id") == video_id for r in rows):
+            return
+        rows.append({"video_id": video_id, "title": title, "notice": notice,
+                     "detected_at": dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S")})
+        with open(FLAGGED_PATH, "w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=FLAGGED_FIELDS)
+            w.writeheader()
+            w.writerows(rows)
+        log(f"    flagged -> {title} ({video_id}) appended to flagged_videos.csv "
+            f"for the cloud delete run.")
+    except Exception as exc:
+        log(f"    could not write flagged_videos.csv: {exc}")
 
 TABS = [
     ("videos", f"https://studio.youtube.com/channel/{CHANNEL_ID}/videos"),
@@ -230,6 +256,7 @@ def scan_and_delete(page, tab_name: str, do_delete: bool, max_pages: int,
                 seen_ids.add(r["video_id"])
                 found.append(r)
                 found_all.append(r)
+                _append_flagged(r["video_id"], r["title"], r["notice"])
             if do_delete and not dup and r["video_id"]:
                 ok = delete_video(page, r["video_id"], r["title"])
                 deleted.append((r["title"], ok))
