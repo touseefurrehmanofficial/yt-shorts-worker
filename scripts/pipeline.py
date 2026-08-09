@@ -26,7 +26,7 @@ import singleton_lock
 from video_editor import edit_video
 from yt_uploader import upload_and_schedule
 
-if __import__("os").environ.get("YT_UPLOAD_MODE") == "api":
+if os.environ.get("YT_UPLOAD_MODE") == "api":
     from api_uploader import upload_and_schedule_api as upload_and_schedule
 
 CSV_PATH = ROOT.parent / "data" / "reels.csv"
