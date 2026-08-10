@@ -26,8 +26,10 @@ import singleton_lock
 from video_editor import edit_video
 from yt_uploader import upload_and_schedule
 
-if os.environ.get("YT_UPLOAD_MODE") == "api":
-    from api_uploader import upload_and_schedule_api as upload_and_schedule
+# NOTE: the API uploader is imported lazily inside process_one() (via
+# _api_upload_and_schedule) rather than here, because YT_UPLOAD_MODE is only
+# set in main() after module import -- an import-time check here would always
+# bind the browser uploader.
 
 CSV_PATH = ROOT.parent / "data" / "reels.csv"
 DOWNLOADS = ROOT.parent / "downloads"
@@ -306,7 +308,8 @@ def process_one(candidate, video_num: int, schedule_dt, batch_num: int,
         log(f"  edited: {edited_path}")
 
         if os.environ.get("YT_UPLOAD_MODE") == "api":
-            link = upload_and_schedule(edited_path, video_title, series_name, schedule_dt)
+            from api_uploader import upload_and_schedule_api as api_upload
+            link = api_upload(edited_path, video_title, series_name, schedule_dt)
         else:
             link = upload_and_schedule(
                 edited_path, video_title, series_name, schedule_date, schedule_time,
