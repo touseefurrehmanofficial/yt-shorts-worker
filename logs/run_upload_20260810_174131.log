@@ -1,0 +1,80 @@
+[worker] using YouTube Data API uploader (OAuth token present)
+[worker] running: C:\hostedtoolcache\windows\Python\3.12.10\x64\python.exe D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py --batch-size 2 --start-from-csv --max-runtime 40 --channel chromium --yt-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\youtube_cookies.json --fb-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\facebook_cookies.json --yt-upload-mode api
+[2026-08-10 17:41:31] Upload mode: YouTube Data API (OAuth).
+[2026-08-10 17:41:31] Continuing schedule from CSV: last=2026-09-01 21:00:00 next=2026-09-02 02:00:00
+[2026-08-10 17:41:31] Runtime budget: 40 minutes (deadline set).
+[2026-08-10 17:41:31] Starting batch: target=2 first_schedule=2026-09-02 02:00:00 interval=5:00:00 candidates_available=2256
+[2026-08-10 17:41:31] [1/6] Processing https://www.facebook.com/reel/1416154303310054/
+[2026-08-10 17:41:31] Processing https://www.facebook.com/reel/1416154303310054/ -> 'Pure Talent 144' scheduled 2026-09-02 02:00:00
+[2026-08-10 17:41:37]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1416154303310054.mp4
+[2026-08-10 17:41:37]   18.5s is shorter than the 30s minimum -- skipping this reel entirely (marked 'skipped', not retried).
+[2026-08-10 17:41:37] [2/6] Processing https://www.facebook.com/reel/1095843187681687/
+[2026-08-10 17:41:37] Processing https://www.facebook.com/reel/1095843187681687/ -> 'Pure Talent 144' scheduled 2026-09-02 02:00:00
+[2026-08-10 17:41:45]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1095843187681687.mp4
+[2026-08-10 17:41:45]   268s exceeds the 178s Shorts limit -- trimming 90.3s off the start to fit.
+[2026-08-10 17:41:45]   FAILED for https://www.facebook.com/reel/1095843187681687/: FileNotFoundError: No mascot images found in D:\a\yt-shorts-worker\yt-shorts-worker\assets matching cartoon_mascot_*.png
+[2026-08-10 17:41:45] Traceback (most recent call last):
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py", line 307, in process_one
+    edit_video(downloaded_path, edited_path, series_name, trim_start=trim_start)
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\video_editor.py", line 121, in edit_video
+    mascot_path = pick_random_mascot()
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\video_editor.py", line 32, in pick_random_mascot
+    raise FileNotFoundError(f"No mascot images found in {MASCOT_DIR} matching {MASCOT_GLOB}")
+FileNotFoundError: No mascot images found in D:\a\yt-shorts-worker\yt-shorts-worker\assets matching cartoon_mascot_*.png
+
+[2026-08-10 17:41:45]   leaving as 'remaining' for retry, moving to next candidate.
+[2026-08-10 17:41:45] [3/6] Processing https://www.facebook.com/reel/2368198676994783/
+[2026-08-10 17:41:45] Processing https://www.facebook.com/reel/2368198676994783/ -> 'Pure Talent 144' scheduled 2026-09-02 02:00:00
+[2026-08-10 17:41:50]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\2368198676994783.mp4
+[2026-08-10 17:41:50]   25.5s is shorter than the 30s minimum -- skipping this reel entirely (marked 'skipped', not retried).
+[2026-08-10 17:41:50] [4/6] Processing https://www.facebook.com/reel/1011057594502581/
+[2026-08-10 17:41:50] Processing https://www.facebook.com/reel/1011057594502581/ -> 'Pure Talent 144' scheduled 2026-09-02 02:00:00
+[2026-08-10 17:41:55]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1011057594502581.mp4
+[2026-08-10 17:41:55]   245s exceeds the 178s Shorts limit -- trimming 67.3s off the start to fit.
+[2026-08-10 17:41:55]   FAILED for https://www.facebook.com/reel/1011057594502581/: FileNotFoundError: No mascot images found in D:\a\yt-shorts-worker\yt-shorts-worker\assets matching cartoon_mascot_*.png
+[2026-08-10 17:41:55] Traceback (most recent call last):
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py", line 307, in process_one
+    edit_video(downloaded_path, edited_path, series_name, trim_start=trim_start)
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\video_editor.py", line 121, in edit_video
+    mascot_path = pick_random_mascot()
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\video_editor.py", line 32, in pick_random_mascot
+    raise FileNotFoundError(f"No mascot images found in {MASCOT_DIR} matching {MASCOT_GLOB}")
+FileNotFoundError: No mascot images found in D:\a\yt-shorts-worker\yt-shorts-worker\assets matching cartoon_mascot_*.png
+
+[2026-08-10 17:41:55]   leaving as 'remaining' for retry, moving to next candidate.
+[2026-08-10 17:41:55] [5/6] Processing https://www.facebook.com/reel/1322277584849371/
+[2026-08-10 17:41:55] Processing https://www.facebook.com/reel/1322277584849371/ -> 'Pure Talent 144' scheduled 2026-09-02 02:00:00
+[2026-08-10 17:42:00]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1322277584849371.mp4
+[2026-08-10 17:42:00]   315s exceeds the 178s Shorts limit -- trimming 137.6s off the start to fit.
+[2026-08-10 17:42:01]   FAILED for https://www.facebook.com/reel/1322277584849371/: FileNotFoundError: No mascot images found in D:\a\yt-shorts-worker\yt-shorts-worker\assets matching cartoon_mascot_*.png
+[2026-08-10 17:42:01] Traceback (most recent call last):
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py", line 307, in process_one
+    edit_video(downloaded_path, edited_path, series_name, trim_start=trim_start)
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\video_editor.py", line 121, in edit_video
+    mascot_path = pick_random_mascot()
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\video_editor.py", line 32, in pick_random_mascot
+    raise FileNotFoundError(f"No mascot images found in {MASCOT_DIR} matching {MASCOT_GLOB}")
+FileNotFoundError: No mascot images found in D:\a\yt-shorts-worker\yt-shorts-worker\assets matching cartoon_mascot_*.png
+
+[2026-08-10 17:42:01]   leaving as 'remaining' for retry, moving to next candidate.
+[2026-08-10 17:42:01] [6/6] Processing https://www.facebook.com/reel/2074398890052256/
+[2026-08-10 17:42:01] Processing https://www.facebook.com/reel/2074398890052256/ -> 'Pure Talent 144' scheduled 2026-09-02 02:00:00
+[2026-08-10 17:42:06]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\2074398890052256.mp4
+[2026-08-10 17:42:06]   FAILED for https://www.facebook.com/reel/2074398890052256/: FileNotFoundError: No mascot images found in D:\a\yt-shorts-worker\yt-shorts-worker\assets matching cartoon_mascot_*.png
+[2026-08-10 17:42:06] Traceback (most recent call last):
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py", line 307, in process_one
+    edit_video(downloaded_path, edited_path, series_name, trim_start=trim_start)
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\video_editor.py", line 121, in edit_video
+    mascot_path = pick_random_mascot()
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\video_editor.py", line 32, in pick_random_mascot
+    raise FileNotFoundError(f"No mascot images found in {MASCOT_DIR} matching {MASCOT_GLOB}")
+FileNotFoundError: No mascot images found in D:\a\yt-shorts-worker\yt-shorts-worker\assets matching cartoon_mascot_*.png
+
+[2026-08-10 17:42:06]   leaving as 'remaining' for retry, moving to next candidate.
+[2026-08-10 17:42:06] WARNING: 3 failures in a row -- stopping this batch early instead of burning through the rest of the candidates. This usually means something structural broke (YouTube upload limit/verification prompt, expired login session, a Studio UI change) rather than a problem with individual reels. Check the error above (and any screenshot path it mentions) before starting another batch.
+[2026-08-10 17:42:06] Batch finished. succeeded=0 attempted=6 target=2
+[2026-08-10 17:42:06] WARNING: only 0/2 reels were successfully scheduled.
