@@ -29,9 +29,29 @@ SCOPES = ["https://www.googleapis.com/auth/youtube"]
 CATEGORY_ID = "22"  # People & Blogs
 
 
+def _load_credentials():
+    """Credentials from env (cloud runner) or from local files (this machine)."""
+    client_env = os.environ.get("GOOGLE_CLIENT_SECRET")
+    token_env = os.environ.get("GOOGLE_REFRESH_TOKEN")
+    if client_env and token_env:
+        return json.loads(client_env), json.loads(token_env)
+
+    root = Path(__file__).resolve().parent.parent
+    token_path = root / "data" / "yt_oauth_token.json"
+    candidates = [
+        *(root / "data").glob("client_secret_*.json"),
+        *(Path.home() / "Downloads").glob("client_secret_*.json"),
+    ]
+    if token_path.exists() and candidates:
+        return json.loads(candidates[0].read_text()), json.loads(token_path.read_text())
+    raise RuntimeError(
+        "No Google credentials: set GOOGLE_CLIENT_SECRET/GOOGLE_REFRESH_TOKEN env "
+        "or have data/yt_oauth_token.json + a client_secret_*.json file present"
+    )
+
+
 def _build_youtube():
-    client = json.loads(os.environ["GOOGLE_CLIENT_SECRET"])
-    token = json.loads(os.environ["GOOGLE_REFRESH_TOKEN"])
+    client, token = _load_credentials()
     if "refresh_token" not in token:
         raise RuntimeError("GOOGLE_REFRESH_TOKEN has no refresh_token field")
     creds = Credentials(
