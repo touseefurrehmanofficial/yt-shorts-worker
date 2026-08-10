@@ -1,0 +1,22 @@
+[worker] claims run via YouTube Data API (flagged_videos.csv)
+[worker] running: C:\hostedtoolcache\windows\Python\3.12.10\x64\python.exe D:\a\yt-shorts-worker\yt-shorts-worker\scripts\api_delete.py
+[2026-08-10 16:55:07] Deleting 9 video(s) via API...
+[2026-08-10 16:55:08]   DELETED Pure Talent 125 (2aTa4vLGwD0)
+[2026-08-10 16:55:08]   reels.csv: marked 1 row(s) 'deleted'.
+[2026-08-10 16:55:09]   DELETED Pure Talent 134 (71IMGW5nKgk)
+[2026-08-10 16:55:09]   reels.csv: marked 1 row(s) 'deleted'.
+[2026-08-10 16:55:10]   DELETED Pure Talent 133 (2J3QBIpdk44)
+[2026-08-10 16:55:10]   reels.csv: marked 1 row(s) 'deleted'.
+[2026-08-10 16:55:11]   DELETED Pure Talent 132 (S6ZDV2XwlqA)
+[2026-08-10 16:55:11]   reels.csv: marked 1 row(s) 'deleted'.
+[2026-08-10 16:55:12]   DELETED Pure Talent 131 (fISG0k1SOf4)
+[2026-08-10 16:55:12]   reels.csv: marked 1 row(s) 'deleted'.
+[2026-08-10 16:55:12]   DELETED Pure Talent 130 (u6JRgjdxzOs)
+[2026-08-10 16:55:12]   reels.csv: marked 1 row(s) 'deleted'.
+[2026-08-10 16:55:13]   DELETED Pure Talent 129 (dn4bz4l1de0)
+[2026-08-10 16:55:13]   reels.csv: marked 1 row(s) 'deleted'.
+[2026-08-10 16:55:14]   DELETED Pure Talent 124 (Y7yRjOZVsUc)
+[2026-08-10 16:55:14]   reels.csv: marked 1 row(s) 'deleted'.
+[2026-08-10 16:55:15]   DELETED Pure Talent 112 (kq1FiwbVgX8)
+[2026-08-10 16:55:15]   reels.csv: marked 1 row(s) 'deleted'.
+[2026-08-10 16:55:15] flagged_videos.csv: 0 still pending.
