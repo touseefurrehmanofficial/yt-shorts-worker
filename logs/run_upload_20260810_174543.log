@@ -1,0 +1,25 @@
+[worker] using YouTube Data API uploader (OAuth token present)
+[worker] running: C:\hostedtoolcache\windows\Python\3.12.10\x64\python.exe D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py --batch-size 2 --start-from-csv --max-runtime 40 --channel chromium --yt-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\youtube_cookies.json --fb-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\facebook_cookies.json --yt-upload-mode api
+[2026-08-10 17:45:44] Upload mode: YouTube Data API (OAuth).
+[2026-08-10 17:45:44] Continuing schedule from CSV: last=2026-09-01 21:00:00 next=2026-09-02 02:00:00
+[2026-08-10 17:45:44] Runtime budget: 40 minutes (deadline set).
+[2026-08-10 17:45:44] Starting batch: target=2 first_schedule=2026-09-02 02:00:00 interval=5:00:00 candidates_available=2254
+[2026-08-10 17:45:44] [1/6] Processing https://www.facebook.com/reel/1095843187681687/
+[2026-08-10 17:45:44] Processing https://www.facebook.com/reel/1095843187681687/ -> 'Pure Talent 144' scheduled 2026-09-02 02:00:00
+[2026-08-10 17:45:51]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1095843187681687.mp4
+[2026-08-10 17:45:51]   268s exceeds the 178s Shorts limit -- trimming 90.3s off the start to fit.
+[2026-08-10 17:46:28]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1095843187681687_edited.mp4
+[api_uploader] 51% uploaded
+[api_uploader] scheduled Pure Talent 144 -> J_xSovuM85w at 2026-09-02T06:00:00Z
+[2026-08-10 17:46:32]   uploaded+scheduled: https://www.youtube.com/shorts/J_xSovuM85w
+[2026-08-10 17:46:32] [2/6] Processing https://www.facebook.com/reel/1011057594502581/
+[2026-08-10 17:46:32] Processing https://www.facebook.com/reel/1011057594502581/ -> 'Pure Talent 145' scheduled 2026-09-02 07:00:00
+[2026-08-10 17:46:36]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1011057594502581.mp4
+[2026-08-10 17:46:36]   245s exceeds the 178s Shorts limit -- trimming 67.3s off the start to fit.
+[2026-08-10 17:47:36]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1011057594502581_edited.mp4
+[api_uploader] 27% uploaded
+[api_uploader] 54% uploaded
+[api_uploader] 81% uploaded
+[api_uploader] scheduled Pure Talent 145 -> k5moggPBcK0 at 2026-09-02T11:00:00Z
+[2026-08-10 17:47:42]   uploaded+scheduled: https://www.youtube.com/shorts/k5moggPBcK0
+[2026-08-10 17:47:42] Batch finished. succeeded=2 attempted=2 target=2
