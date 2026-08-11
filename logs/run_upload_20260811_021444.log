@@ -1,0 +1,98 @@
+[worker] using YouTube Data API uploader (OAuth token present)
+[worker] running: C:\hostedtoolcache\windows\Python\3.12.10\x64\python.exe D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py --batch-size 10 --start-from-csv --max-runtime 270 --channel chromium --yt-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\youtube_cookies.json --fb-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\facebook_cookies.json --yt-upload-mode api
+[2026-08-11 02:14:45] Upload mode: YouTube Data API (OAuth).
+[2026-08-11 02:14:45] Continuing schedule from CSV: last=2026-09-02 07:00:00 next=2026-09-02 12:00:00
+[2026-08-11 02:14:45] Runtime budget: 270 minutes (deadline set).
+[2026-08-11 02:14:45] Starting batch: target=10 first_schedule=2026-09-02 12:00:00 interval=5:00:00 candidates_available=2252
+[2026-08-11 02:14:45] [1/30] Processing https://www.facebook.com/reel/1322277584849371/
+[2026-08-11 02:14:45] Processing https://www.facebook.com/reel/1322277584849371/ -> 'Pure Talent 146' scheduled 2026-09-02 12:00:00
+[2026-08-11 02:14:49]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1322277584849371.mp4
+[2026-08-11 02:14:49]   315s exceeds the 178s Shorts limit -- trimming 137.6s off the start to fit.
+[2026-08-11 02:15:27]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1322277584849371_edited.mp4
+[api_uploader] 41% uploaded
+[api_uploader] 82% uploaded
+[api_uploader] scheduled Pure Talent 146 -> 46aB5Aiv93Y at 2026-09-02T16:00:00Z
+[2026-08-11 02:15:30]   uploaded+scheduled: https://www.youtube.com/shorts/46aB5Aiv93Y
+[2026-08-11 02:15:30] [2/30] Processing https://www.facebook.com/reel/2074398890052256/
+[2026-08-11 02:15:30] Processing https://www.facebook.com/reel/2074398890052256/ -> 'Pure Talent 147' scheduled 2026-09-02 17:00:00
+[2026-08-11 02:15:37]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\2074398890052256.mp4
+[2026-08-11 02:16:41]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\2074398890052256_edited.mp4
+[api_uploader] 24% uploaded
+[api_uploader] 49% uploaded
+[api_uploader] 73% uploaded
+[api_uploader] 98% uploaded
+[api_uploader] scheduled Pure Talent 147 -> L2ivV9vDISU at 2026-09-02T21:00:00Z
+[2026-08-11 02:16:44]   uploaded+scheduled: https://www.youtube.com/shorts/L2ivV9vDISU
+[2026-08-11 02:16:44] [3/30] Processing https://www.facebook.com/reel/1373300890531986/
+[2026-08-11 02:16:44] Processing https://www.facebook.com/reel/1373300890531986/ -> 'Pure Talent 148' scheduled 2026-09-02 22:00:00
+[2026-08-11 02:16:50]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1373300890531986.mp4
+[2026-08-11 02:16:50]   227s exceeds the 178s Shorts limit -- trimming 49.4s off the start to fit.
+[2026-08-11 02:18:02]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1373300890531986_edited.mp4
+[api_uploader] 26% uploaded
+[api_uploader] 53% uploaded
+[api_uploader] 79% uploaded
+[api_uploader] scheduled Pure Talent 148 -> k8U451NdoJo at 2026-09-03T02:00:00Z
+[2026-08-11 02:18:09]   uploaded+scheduled: https://www.youtube.com/shorts/k8U451NdoJo
+[2026-08-11 02:18:09] [4/30] Processing https://www.facebook.com/reel/6537938176327598/
+[2026-08-11 02:18:09] Processing https://www.facebook.com/reel/6537938176327598/ -> 'Pure Talent 149' scheduled 2026-09-03 03:00:00
+[2026-08-11 02:18:15]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\6537938176327598.mp4
+[2026-08-11 02:18:15]   431s exceeds the 178s Shorts limit -- trimming 253.5s off the start to fit.
+[2026-08-11 02:19:07]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\6537938176327598_edited.mp4
+[api_uploader] 35% uploaded
+[api_uploader] 69% uploaded
+[api_uploader] scheduled Pure Talent 149 -> i__rPFhumKs at 2026-09-03T07:00:00Z
+[2026-08-11 02:19:12]   uploaded+scheduled: https://www.youtube.com/shorts/i__rPFhumKs
+[2026-08-11 02:19:12] [5/30] Processing https://www.facebook.com/reel/4010321025883314/
+[2026-08-11 02:19:12] Processing https://www.facebook.com/reel/4010321025883314/ -> 'Pure Talent 150' scheduled 2026-09-03 08:00:00
+[2026-08-11 02:19:20]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\4010321025883314.mp4
+[2026-08-11 02:19:20]   244s exceeds the 178s Shorts limit -- trimming 66.6s off the start to fit.
+[2026-08-11 02:20:42]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\4010321025883314_edited.mp4
+[api_uploader] 24% uploaded
+[api_uploader] 47% uploaded
+[api_uploader] 71% uploaded
+[api_uploader] 94% uploaded
+[api_uploader] scheduled Pure Talent 150 -> 28aQRQn4xC4 at 2026-09-03T12:00:00Z
+[2026-08-11 02:20:46]   uploaded+scheduled: https://www.youtube.com/shorts/28aQRQn4xC4
+[2026-08-11 02:20:46] [6/30] Processing https://www.facebook.com/reel/630826939118274/
+[2026-08-11 02:20:46] Processing https://www.facebook.com/reel/630826939118274/ -> 'Pure Talent 151' scheduled 2026-09-03 13:00:00
+[2026-08-11 02:20:52]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\630826939118274.mp4
+[2026-08-11 02:20:52]   1825s exceeds the 178s Shorts limit -- trimming 1647.9s off the start to fit.
+[2026-08-11 02:21:18]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\630826939118274_edited.mp4
+[api_uploader] 62% uploaded
+[api_uploader] scheduled Pure Talent 151 -> 2-vqr-Oc4hA at 2026-09-03T17:00:00Z
+[2026-08-11 02:21:20]   uploaded+scheduled: https://www.youtube.com/shorts/2-vqr-Oc4hA
+[2026-08-11 02:21:20] [7/30] Processing https://www.facebook.com/reel/4339220219649175/
+[2026-08-11 02:21:20] Processing https://www.facebook.com/reel/4339220219649175/ -> 'Pure Talent 152' scheduled 2026-09-03 18:00:00
+[2026-08-11 02:21:26]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\4339220219649175.mp4
+[2026-08-11 02:21:26]   14.7s is shorter than the 30s minimum -- skipping this reel entirely (marked 'skipped', not retried).
+[2026-08-11 02:21:26] [8/30] Processing https://www.facebook.com/reel/1388015955065141/
+[2026-08-11 02:21:26] Processing https://www.facebook.com/reel/1388015955065141/ -> 'Pure Talent 152' scheduled 2026-09-03 18:00:00
+[2026-08-11 02:21:30]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1388015955065141.mp4
+[2026-08-11 02:21:43]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1388015955065141_edited.mp4
+[api_uploader] 90% uploaded
+[api_uploader] scheduled Pure Talent 152 -> VKmRu5aO_6k at 2026-09-03T22:00:00Z
+[2026-08-11 02:21:45]   uploaded+scheduled: https://www.youtube.com/shorts/VKmRu5aO_6k
+[2026-08-11 02:21:45] [9/30] Processing https://www.facebook.com/reel/777153263183541/
+[2026-08-11 02:21:45] Processing https://www.facebook.com/reel/777153263183541/ -> 'Pure Talent 153' scheduled 2026-09-03 23:00:00
+[2026-08-11 02:21:53]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\777153263183541.mp4
+[2026-08-11 02:21:54]   555s exceeds the 178s Shorts limit -- trimming 377.6s off the start to fit.
+[2026-08-11 02:22:36]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\777153263183541_edited.mp4
+[api_uploader] 37% uploaded
+[api_uploader] 74% uploaded
+[api_uploader] scheduled Pure Talent 153 -> luYh7UuDvOs at 2026-09-04T03:00:00Z
+[2026-08-11 02:22:39]   uploaded+scheduled: https://www.youtube.com/shorts/luYh7UuDvOs
+[2026-08-11 02:22:39] [10/30] Processing https://www.facebook.com/reel/1657344674742803/
+[2026-08-11 02:22:39] Processing https://www.facebook.com/reel/1657344674742803/ -> 'Pure Talent 154' scheduled 2026-09-04 04:00:00
+[2026-08-11 02:22:43]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1657344674742803.mp4
+[2026-08-11 02:22:59]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1657344674742803_edited.mp4
+[api_uploader] 87% uploaded
+[api_uploader] scheduled Pure Talent 154 -> xR1tyi3Xysg at 2026-09-04T08:00:00Z
+[2026-08-11 02:23:02]   uploaded+scheduled: https://www.youtube.com/shorts/xR1tyi3Xysg
+[2026-08-11 02:23:02] [11/30] Processing https://www.facebook.com/reel/1507895291373287/
+[2026-08-11 02:23:02] Processing https://www.facebook.com/reel/1507895291373287/ -> 'Pure Talent 155' scheduled 2026-09-04 09:00:00
+[2026-08-11 02:23:07]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1507895291373287.mp4
+[2026-08-11 02:23:35]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1507895291373287_edited.mp4
+[api_uploader] 63% uploaded
+[api_uploader] scheduled Pure Talent 155 -> v6Q90H0UNXs at 2026-09-04T13:00:00Z
+[2026-08-11 02:23:38]   uploaded+scheduled: https://www.youtube.com/shorts/v6Q90H0UNXs
+[2026-08-11 02:23:38] Batch finished. succeeded=10 attempted=11 target=10
