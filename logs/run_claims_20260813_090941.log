@@ -1,0 +1,12 @@
+[worker] claims run via YouTube Data API (flagged_videos.csv)
+[worker] running: C:\hostedtoolcache\windows\Python\3.12.10\x64\python.exe D:\a\yt-shorts-worker\yt-shorts-worker\scripts\api_delete.py
+[2026-08-13 09:09:42] Deleting 4 video(s) via API...
+[2026-08-13 09:09:43]   Pure Talent 167 (OXOBBWs7hS4) already gone (404) -- marking handled.
+[2026-08-13 09:09:43]   reels.csv: marked 1 row(s) 'deleted'.
+[2026-08-13 09:09:43]   Pure Talent 162 (MTdtwXP-syY) already gone (404) -- marking handled.
+[2026-08-13 09:09:43]   reels.csv: marked 1 row(s) 'deleted'.
+[2026-08-13 09:09:43]   Pure Talent 155 (v6Q90H0UNXs) already gone (404) -- marking handled.
+[2026-08-13 09:09:43]   reels.csv: marked 1 row(s) 'deleted'.
+[2026-08-13 09:09:43]   Pure Talent 147 (L2ivV9vDISU) already gone (404) -- marking handled.
+[2026-08-13 09:09:43]   reels.csv: marked 1 row(s) 'deleted'.
+[2026-08-13 09:09:43] flagged_videos.csv: 0 still pending.
