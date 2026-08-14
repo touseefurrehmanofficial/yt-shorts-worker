@@ -23,6 +23,7 @@ ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
 
 import singleton_lock
+import gemini_meta
 from video_editor import edit_video
 from yt_uploader import upload_and_schedule
 
@@ -166,11 +167,14 @@ def save_rows(rows):
 
 def next_video_number(rows):
     best = 0
+    named = 0
     for r in rows:
         m = NAME_RE.search(r.get("video_name") or "")
         if m:
             best = max(best, int(m.group(1)))
-    return best + 1
+        if r.get("video_name"):
+            named += 1
+    return max(best, named)
 
 
 def next_batch_number(rows):
@@ -265,6 +269,28 @@ def extract_video_id(link: str) -> str:
     return link.rstrip("/").split("/")[-1].split("?")[0]
 
 
+def _recheck_still_remaining(reel_id: str) -> bool:
+    """Re-read data/reels.csv from disk: another (duplicated/twin) process may
+    have just uploaded this reel while we were downloading/editing. Uploading
+    it anyway would create a duplicate video on YouTube."""
+    try:
+        for r in load_rows():
+            if r["reel_id"] == reel_id:
+                return r["status"] == "remaining"
+    except Exception:
+        pass
+    return True
+
+
+def _next_free_slot(schedule_dt, rows0) -> object:
+    """Skip forward past slots another process already filled (twins can
+    schedule different reels into the same slot)."""
+    taken = {r["scheduled_date"] for r in rows0 if r.get("scheduled_date")}
+    while schedule_dt.isoformat() in taken:
+        schedule_dt += SCHEDULE_INTERVAL
+    return schedule_dt
+
+
 def process_one(candidate, video_num: int, schedule_dt, batch_num: int,
                 rows, by_id, channel: str = "chrome", headless: bool = False,
                 yt_cookies: Path | None = None,
@@ -275,8 +301,8 @@ def process_one(candidate, video_num: int, schedule_dt, batch_num: int,
     failures are logged here and reflected in the return value."""
     reel_id = candidate["reel_id"]
     reel_url = candidate["reel_url"]
-    video_title = f"Pure Talent {video_num}"  # YouTube title only -- gets the number
-    series_name = "Pure Talent"  # description text + in-video overlay -- no number
+    video_title = f"Pure Talent {video_num}"  # fallback if Gemini is off/fails
+    series_name = "Pure Talent"  # description fallback + in-video overlay -- no number
     schedule_date = schedule_dt.date()
     schedule_time = schedule_dt.strftime("%H:%M")
 
@@ -307,12 +333,26 @@ def process_one(candidate, video_num: int, schedule_dt, batch_num: int,
         edit_video(downloaded_path, edited_path, series_name, trim_start=trim_start)
         log(f"  edited: {edited_path}")
 
+        if not _recheck_still_remaining(reel_id):
+            log(f"  reel was already uploaded by another process while this "
+                f"run was working -- skipping to avoid a duplicate.")
+            return "skipped", video_num, schedule_dt
+        fresh = load_rows()
+        schedule_dt = _next_free_slot(schedule_dt, fresh)
+
         if os.environ.get("YT_UPLOAD_MODE") == "api":
             from api_uploader import upload_and_schedule_api as api_upload
-            link = api_upload(edited_path, video_title, series_name, schedule_dt)
+        description = series_name
+        if gemini_meta.ENABLED:
+            ai_title, ai_desc = gemini_meta.generate(edited_path)
+            if ai_title and ai_desc:
+                video_title, description = ai_title, ai_desc
+                log(f"  gemini meta: {video_title!r}")
+        if os.environ.get("YT_UPLOAD_MODE") == "api":
+            link = api_upload(edited_path, video_title, description, schedule_dt)
         else:
             link = upload_and_schedule(
-                edited_path, video_title, series_name, schedule_date, schedule_time,
+                edited_path, video_title, description, schedule_date, schedule_time,
                 headless=headless, channel=channel, cookies_json=yt_cookies,
             )
         yt_id = extract_video_id(link)
@@ -385,7 +425,14 @@ def main():
                         help="Playwright-format cookie JSON (cloud mode)")
     parser.add_argument("--fb-cookies", type=str, default=None,
                         help="Playwright-format cookie JSON (cloud mode)")
+    parser.add_argument("--no-gemini-meta", action="store_true",
+                        help="skip Gemini title/description generation; "
+                             "use the stock 'Pure Talent N' title")
     args = parser.parse_args()
+
+    if args.no_gemini_meta:
+        gemini_meta.ENABLED = False
+        log("Gemini title/description generation disabled (--no-gemini-meta).")
 
     if args.yt_upload_mode == "api":
         os.environ["YT_UPLOAD_MODE"] = "api"
