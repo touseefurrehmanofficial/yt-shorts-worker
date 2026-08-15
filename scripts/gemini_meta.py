@@ -111,7 +111,11 @@ def generate(video_path, timeout_seconds: int = 240):
                 last_err = f"empty/invalid fields in: {text[:200]!r}"
             except Exception as exc:
                 last_err = str(exc)
-                if "404" not in str(exc) and "not found" not in str(exc).lower():
+                transient = any(m in str(exc) for m in
+                                ("503", "429", "500", "UNAVAILABLE",
+                                 "RESOURCE_EXHAUSTED"))
+                if not transient and "404" not in str(exc) \
+                        and "not found" not in str(exc).lower():
                     print(f"[gemini_meta] {model} failed: {exc}", flush=True)
                     break
         print(f"[gemini_meta] generation failed: {last_err}", flush=True)
