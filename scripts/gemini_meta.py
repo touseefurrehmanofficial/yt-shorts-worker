@@ -13,6 +13,7 @@ import json
 import os
 import re
 import sys
+import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -77,6 +78,20 @@ def generate(video_path, timeout_seconds: int = 240):
     uploaded = None
     try:
         uploaded = client.files.upload(file=str(video_path))
+        deadline = time.time() + 180
+        while True:
+            state = getattr(client.files.get(name=uploaded.name).state,
+                            "name", "")
+            if state == "ACTIVE":
+                break
+            if state == "FAILED":
+                print("[gemini_meta] file processing failed.", flush=True)
+                return None, None
+            if time.time() > deadline:
+                print("[gemini_meta] file did not become ACTIVE in time.",
+                      flush=True)
+                return None, None
+            time.sleep(5)
         last_err = "no model responded"
         for model in MODELS:
             try:
