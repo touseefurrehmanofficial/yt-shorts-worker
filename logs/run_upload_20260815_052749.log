@@ -1,0 +1,32 @@
+[worker] using YouTube Data API uploader (OAuth token present)
+[worker] running: C:\hostedtoolcache\windows\Python\3.12.10\x64\python.exe D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py --batch-size 2 --start-from-csv --max-runtime 45 --channel chromium --yt-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\youtube_cookies.json --fb-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\facebook_cookies.json --yt-upload-mode api
+[2026-08-15 05:27:49] Upload mode: YouTube Data API (OAuth).
+[2026-08-15 05:27:49] Continuing schedule from CSV: last=2026-09-13 08:00:00 next=2026-09-13 13:00:00
+[2026-08-15 05:27:49] Runtime budget: 45 minutes (deadline set).
+[2026-08-15 05:27:49] Starting batch: target=2 first_schedule=2026-09-13 13:00:00 interval=5:00:00 candidates_available=2186
+[2026-08-15 05:27:49] [1/6] Processing https://www.facebook.com/reel/1547515926687136/
+[2026-08-15 05:27:49] Processing https://www.facebook.com/reel/1547515926687136/ -> 'Pure Talent 198' scheduled 2026-09-13 13:00:00
+[2026-08-15 05:27:57]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1547515926687136.mp4
+[2026-08-15 05:27:57]   544s exceeds the 178s Shorts limit -- trimming 366.1s off the start to fit.
+[2026-08-15 05:29:07]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1547515926687136_edited.mp4
+Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+[gemini_meta] title/description generated (gemini-2.5-flash).
+[2026-08-15 05:29:36]   gemini meta: 'Restoring a Vintage Wind-Up Airplane Carousel Toy from the Ground Up'
+[api_uploader] 31% uploaded
+[api_uploader] 61% uploaded
+[api_uploader] 92% uploaded
+[api_uploader] scheduled Restoring a Vintage Wind-Up Airplane Carousel Toy from the Ground Up -> pn3mUyzdFZY at 2026-09-13T17:00:00Z
+[2026-08-15 05:29:42]   uploaded+scheduled: https://www.youtube.com/shorts/pn3mUyzdFZY
+[2026-08-15 05:29:42] [2/6] Processing https://www.facebook.com/reel/2496010560843383/
+[2026-08-15 05:29:42] Processing https://www.facebook.com/reel/2496010560843383/ -> 'Pure Talent 199' scheduled 2026-09-13 18:00:00
+[2026-08-15 05:29:48]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\2496010560843383.mp4
+[2026-08-15 05:29:48]   301s exceeds the 178s Shorts limit -- trimming 123.5s off the start to fit.
+[2026-08-15 05:30:41]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\2496010560843383_edited.mp4
+[gemini_meta] gemini-2.5-flash failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[gemini_meta] generation failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[api_uploader] 32% uploaded
+[api_uploader] 64% uploaded
+[api_uploader] 96% uploaded
+[api_uploader] scheduled Pure Talent 199 -> e7BNPMjeIwI at 2026-09-13T22:00:00Z
+[2026-08-15 05:31:51]   uploaded+scheduled: https://www.youtube.com/shorts/e7BNPMjeIwI
+[2026-08-15 05:31:51] Batch finished. succeeded=2 attempted=2 target=2
