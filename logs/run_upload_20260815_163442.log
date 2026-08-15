@@ -1,0 +1,108 @@
+[worker] using YouTube Data API uploader (OAuth token present)
+[worker] running: C:\hostedtoolcache\windows\Python\3.12.10\x64\python.exe D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py --batch-size 10 --start-from-csv --max-runtime 270 --channel chromium --yt-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\youtube_cookies.json --fb-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\facebook_cookies.json --yt-upload-mode api
+[2026-08-15 16:34:43] Upload mode: YouTube Data API (OAuth).
+[2026-08-15 16:34:43] Continuing schedule from CSV: last=2026-09-13 18:00:00 next=2026-09-13 23:00:00
+[2026-08-15 16:34:43] Runtime budget: 270 minutes (deadline set).
+[2026-08-15 16:34:43] Starting batch: target=10 first_schedule=2026-09-13 23:00:00 interval=5:00:00 candidates_available=2184
+[2026-08-15 16:34:43] [1/30] Processing https://www.facebook.com/reel/2497373743743602/
+[2026-08-15 16:34:43] Processing https://www.facebook.com/reel/2497373743743602/ -> 'Pure Talent 200' scheduled 2026-09-13 23:00:00
+[2026-08-15 16:34:48]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\2497373743743602.mp4
+[2026-08-15 16:35:03]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\2497373743743602_edited.mp4
+Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+[gemini_meta] title/description generated (gemini-2.5-flash).
+[2026-08-15 16:35:22]   gemini meta: 'Pure Talent: Watch her build a metal shed from the ground up'
+[api_uploader] 47% uploaded
+[api_uploader] 94% uploaded
+[api_uploader] scheduled Pure Talent: Watch her build a metal shed from the ground up -> lZvc0MQ30SE at 2026-09-14T03:00:00Z
+[2026-08-15 16:35:27]   uploaded+scheduled: https://www.youtube.com/shorts/lZvc0MQ30SE
+[2026-08-15 16:35:27] [2/30] Processing https://www.facebook.com/reel/1253378933598271/
+[2026-08-15 16:35:27] Processing https://www.facebook.com/reel/1253378933598271/ -> 'Pure Talent 201' scheduled 2026-09-14 04:00:00
+[2026-08-15 16:35:33]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1253378933598271.mp4
+[2026-08-15 16:35:33]   702s exceeds the 178s Shorts limit -- trimming 524.0s off the start to fit.
+[2026-08-15 16:36:12]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1253378933598271_edited.mp4
+[gemini_meta] title/description generated (gemini-2.5-flash).
+[2026-08-15 16:36:36]   gemini meta: 'Watch Her Build and Start a Generator from Scratch'
+[api_uploader] 40% uploaded
+[api_uploader] 81% uploaded
+[api_uploader] scheduled Watch Her Build and Start a Generator from Scratch -> zIndj3jevT4 at 2026-09-14T08:00:00Z
+[2026-08-15 16:36:40]   uploaded+scheduled: https://www.youtube.com/shorts/zIndj3jevT4
+[2026-08-15 16:36:40] [3/30] Processing https://www.facebook.com/reel/1927610904701156/
+[2026-08-15 16:36:40] Processing https://www.facebook.com/reel/1927610904701156/ -> 'Pure Talent 202' scheduled 2026-09-14 09:00:00
+[2026-08-15 16:36:44]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1927610904701156.mp4
+[2026-08-15 16:37:23]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1927610904701156_edited.mp4
+[gemini_meta] title/description generated (gemini-2.5-flash).
+[2026-08-15 16:37:46]   gemini meta: 'Watch Her Bring a Dead Motor Back to Life with Expert Repairs!'
+[api_uploader] 27% uploaded
+[api_uploader] 54% uploaded
+[api_uploader] 81% uploaded
+[api_uploader] scheduled Watch Her Bring a Dead Motor Back to Life with Expert Repairs! -> MDDw19YaAqA at 2026-09-14T13:00:00Z
+[2026-08-15 16:37:51]   uploaded+scheduled: https://www.youtube.com/shorts/MDDw19YaAqA
+[2026-08-15 16:37:51] [4/30] Processing https://www.facebook.com/reel/1175619540188717/
+[2026-08-15 16:37:51] Processing https://www.facebook.com/reel/1175619540188717/ -> 'Pure Talent 203' scheduled 2026-09-14 14:00:00
+[2026-08-15 16:37:55]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1175619540188717.mp4
+[2026-08-15 16:38:02]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1175619540188717_edited.mp4
+[gemini_meta] title/description generated (gemini-2.5-flash).
+[2026-08-15 16:38:19]   gemini meta: 'Skilled Woman Transforms Metal into a Beautiful Stand'
+[api_uploader] scheduled Skilled Woman Transforms Metal into a Beautiful Stand -> HqjlSq1jg5k at 2026-09-14T18:00:00Z
+[2026-08-15 16:38:22]   uploaded+scheduled: https://www.youtube.com/shorts/HqjlSq1jg5k
+[2026-08-15 16:38:22] [5/30] Processing https://www.facebook.com/reel/1852463685555134/
+[2026-08-15 16:38:22] Processing https://www.facebook.com/reel/1852463685555134/ -> 'Pure Talent 204' scheduled 2026-09-14 19:00:00
+[2026-08-15 16:38:26]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1852463685555134.mp4
+[2026-08-15 16:38:27]   233s exceeds the 178s Shorts limit -- trimming 55.6s off the start to fit.
+[2026-08-15 16:39:01]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1852463685555134_edited.mp4
+[gemini_meta] title/description generated (gemini-2.5-flash).
+[2026-08-15 16:39:25]   gemini meta: 'Woman crafts an incredible rocket stove from raw metal'
+[api_uploader] 29% uploaded
+[api_uploader] 57% uploaded
+[api_uploader] 86% uploaded
+[api_uploader] scheduled Woman crafts an incredible rocket stove from raw metal -> B4A6weS_iNg at 2026-09-14T23:00:00Z
+[2026-08-15 16:39:30]   uploaded+scheduled: https://www.youtube.com/shorts/B4A6weS_iNg
+[2026-08-15 16:39:30] [6/30] Processing https://www.facebook.com/reel/1458571415759774/
+[2026-08-15 16:39:30] Processing https://www.facebook.com/reel/1458571415759774/ -> 'Pure Talent 205' scheduled 2026-09-15 00:00:00
+[2026-08-15 16:39:33]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1458571415759774.mp4
+[2026-08-15 16:39:33]   24.4s is shorter than the 30s minimum -- skipping this reel entirely (marked 'skipped', not retried).
+[2026-08-15 16:39:33] [7/30] Processing https://www.facebook.com/reel/3581031785360812/
+[2026-08-15 16:39:33] Processing https://www.facebook.com/reel/3581031785360812/ -> 'Pure Talent 205' scheduled 2026-09-15 00:00:00
+[2026-08-15 16:39:37]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\3581031785360812.mp4
+[2026-08-15 16:39:51]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\3581031785360812_edited.mp4
+[gemini_meta] title/description generated (gemini-2.5-flash).
+[2026-08-15 16:40:38]   gemini meta: 'Pure Talent: Watch Her Build a Powerful Generator from Scratch'
+[api_uploader] 59% uploaded
+[api_uploader] scheduled Pure Talent: Watch Her Build a Powerful Generator from Scratch -> ihtL8SLHhbo at 2026-09-15T04:00:00Z
+[2026-08-15 16:40:42]   uploaded+scheduled: https://www.youtube.com/shorts/ihtL8SLHhbo
+[2026-08-15 16:40:42] [8/30] Processing https://www.facebook.com/reel/1535181907867460/
+[2026-08-15 16:40:42] Processing https://www.facebook.com/reel/1535181907867460/ -> 'Pure Talent 206' scheduled 2026-09-15 05:00:00
+[2026-08-15 16:40:46]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1535181907867460.mp4
+[2026-08-15 16:40:58]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1535181907867460_edited.mp4
+[gemini_meta] title/description generated (gemini-2.5-flash).
+[2026-08-15 16:41:46]   gemini meta: 'Woman builds a generator from scratch by hand'
+[api_uploader] scheduled Woman builds a generator from scratch by hand -> G0yUVHv6uhU at 2026-09-15T09:00:00Z
+[2026-08-15 16:41:49]   uploaded+scheduled: https://www.youtube.com/shorts/G0yUVHv6uhU
+[2026-08-15 16:41:49] [9/30] Processing https://www.facebook.com/reel/935628429117617/
+[2026-08-15 16:41:49] Processing https://www.facebook.com/reel/935628429117617/ -> 'Pure Talent 207' scheduled 2026-09-15 10:00:00
+[2026-08-15 16:41:57]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\935628429117617.mp4
+[2026-08-15 16:41:57]   303s exceeds the 178s Shorts limit -- trimming 125.8s off the start to fit.
+[2026-08-15 16:42:52]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\935628429117617_edited.mp4
+[gemini_meta] generation failed: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash is no longer available. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-to-interactions).', 'status': 'NOT_FOUND'}}
+[api_uploader] 20% uploaded
+[api_uploader] 41% uploaded
+[api_uploader] 61% uploaded
+[api_uploader] 81% uploaded
+[api_uploader] scheduled Pure Talent 207 -> MyEO-Aj-Eqw at 2026-09-15T14:00:00Z
+[2026-08-15 16:44:19]   uploaded+scheduled: https://www.youtube.com/shorts/MyEO-Aj-Eqw
+[2026-08-15 16:44:19] [10/30] Processing https://www.facebook.com/reel/1836187557052729/
+[2026-08-15 16:44:19] Processing https://www.facebook.com/reel/1836187557052729/ -> 'Pure Talent 208' scheduled 2026-09-15 15:00:00
+[2026-08-15 16:44:23]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1836187557052729.mp4
+[2026-08-15 16:44:29]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1836187557052729_edited.mp4
+[gemini_meta] generation failed: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash is no longer available. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-to-interactions).', 'status': 'NOT_FOUND'}}
+[api_uploader] scheduled Pure Talent 208 -> _p_md9jUe-k at 2026-09-15T19:00:00Z
+[2026-08-15 16:45:21]   uploaded+scheduled: https://www.youtube.com/shorts/_p_md9jUe-k
+[2026-08-15 16:45:21] [11/30] Processing https://www.facebook.com/reel/974655736987078/
+[2026-08-15 16:45:21] Processing https://www.facebook.com/reel/974655736987078/ -> 'Pure Talent 209' scheduled 2026-09-15 20:00:00
+[2026-08-15 16:45:25]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\974655736987078.mp4
+[2026-08-15 16:45:34]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\974655736987078_edited.mp4
+[gemini_meta] generation failed: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash is no longer available. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-to-interactions).', 'status': 'NOT_FOUND'}}
+[api_uploader] 95% uploaded
+[api_uploader] scheduled Pure Talent 209 -> oosV95kYqfo at 2026-09-16T00:00:00Z
+[2026-08-15 16:46:15]   uploaded+scheduled: https://www.youtube.com/shorts/oosV95kYqfo
+[2026-08-15 16:46:16] Batch finished. succeeded=10 attempted=11 target=10
