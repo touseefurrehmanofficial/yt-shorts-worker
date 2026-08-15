@@ -1,0 +1,126 @@
+[worker] using YouTube Data API uploader (OAuth token present)
+[worker] running: C:\hostedtoolcache\windows\Python\3.12.10\x64\python.exe D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py --batch-size 10 --start-from-csv --max-runtime 270 --channel chromium --yt-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\youtube_cookies.json --fb-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\facebook_cookies.json --yt-upload-mode api
+[2026-08-15 01:43:08] Upload mode: YouTube Data API (OAuth).
+[2026-08-15 01:43:08] Continuing schedule from CSV: last=2026-09-11 06:00:00 next=2026-09-11 11:00:00
+[2026-08-15 01:43:08] Runtime budget: 270 minutes (deadline set).
+[2026-08-15 01:43:08] Starting batch: target=10 first_schedule=2026-09-11 11:00:00 interval=5:00:00 candidates_available=2199
+[2026-08-15 01:43:08] [1/30] Processing https://www.facebook.com/reel/590187783983149/
+[2026-08-15 01:43:08] Processing https://www.facebook.com/reel/590187783983149/ -> 'Pure Talent 188' scheduled 2026-09-11 11:00:00
+[2026-08-15 01:43:13]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\590187783983149.mp4
+[2026-08-15 01:43:36]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\590187783983149_edited.mp4
+Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+[gemini_meta] gemini-2.5-flash failed: 400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'The File u0ewdsd68qy2 is not in an ACTIVE state and usage is not allowed.', 'status': 'FAILED_PRECONDITION'}}
+[gemini_meta] generation failed: 400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'The File u0ewdsd68qy2 is not in an ACTIVE state and usage is not allowed.', 'status': 'FAILED_PRECONDITION'}}
+[api_uploader] 88% uploaded
+[api_uploader] scheduled Pure Talent 188 -> lAZ7OeL53ok at 2026-09-11T15:00:00Z
+[2026-08-15 01:43:44]   uploaded+scheduled: https://www.youtube.com/shorts/lAZ7OeL53ok
+[2026-08-15 01:43:44] [2/30] Processing https://www.facebook.com/reel/1942763809813412/
+[2026-08-15 01:43:44] Processing https://www.facebook.com/reel/1942763809813412/ -> 'Pure Talent 189' scheduled 2026-09-11 16:00:00
+[2026-08-15 01:43:50]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1942763809813412.mp4
+[2026-08-15 01:43:50]   286s exceeds the 178s Shorts limit -- trimming 108.6s off the start to fit.
+[2026-08-15 01:44:58]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1942763809813412_edited.mp4
+[gemini_meta] gemini-2.5-flash failed: 400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'The File 0dmksr0z36bu is not in an ACTIVE state and usage is not allowed.', 'status': 'FAILED_PRECONDITION'}}
+[gemini_meta] generation failed: 400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'The File 0dmksr0z36bu is not in an ACTIVE state and usage is not allowed.', 'status': 'FAILED_PRECONDITION'}}
+[api_uploader] 31% uploaded
+[api_uploader] 63% uploaded
+[api_uploader] 94% uploaded
+[api_uploader] scheduled Pure Talent 189 -> qDvuahqATrA at 2026-09-11T20:00:00Z
+[2026-08-15 01:45:06]   uploaded+scheduled: https://www.youtube.com/shorts/qDvuahqATrA
+[2026-08-15 01:45:06] [3/30] Processing https://www.facebook.com/reel/2158793901283088/
+[2026-08-15 01:45:06] Processing https://www.facebook.com/reel/2158793901283088/ -> 'Pure Talent 190' scheduled 2026-09-11 21:00:00
+[2026-08-15 01:45:10]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\2158793901283088.mp4
+[2026-08-15 01:45:11]   18.0s is shorter than the 30s minimum -- skipping this reel entirely (marked 'skipped', not retried).
+[2026-08-15 01:45:11] [4/30] Processing https://www.facebook.com/reel/1358235301403709/
+[2026-08-15 01:45:11] Processing https://www.facebook.com/reel/1358235301403709/ -> 'Pure Talent 190' scheduled 2026-09-11 21:00:00
+[2026-08-15 01:45:15]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1358235301403709.mp4
+[2026-08-15 01:46:02]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1358235301403709_edited.mp4
+[gemini_meta] gemini-2.5-flash failed: 400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'The File dfed65teortf is not in an ACTIVE state and usage is not allowed.', 'status': 'FAILED_PRECONDITION'}}
+[gemini_meta] generation failed: 400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'The File dfed65teortf is not in an ACTIVE state and usage is not allowed.', 'status': 'FAILED_PRECONDITION'}}
+[api_uploader] 45% uploaded
+[api_uploader] 91% uploaded
+[api_uploader] scheduled Pure Talent 190 -> 94Z2R2ed8ZM at 2026-09-12T01:00:00Z
+[2026-08-15 01:46:09]   uploaded+scheduled: https://www.youtube.com/shorts/94Z2R2ed8ZM
+[2026-08-15 01:46:09] [5/30] Processing https://www.facebook.com/reel/1820362862683132/
+[2026-08-15 01:46:09] Processing https://www.facebook.com/reel/1820362862683132/ -> 'Pure Talent 191' scheduled 2026-09-12 02:00:00
+[2026-08-15 01:46:13]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1820362862683132.mp4
+[2026-08-15 01:46:28]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1820362862683132_edited.mp4
+[gemini_meta] gemini-2.5-flash failed: 400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'The File y4x4yjcjhjrz is not in an ACTIVE state and usage is not allowed.', 'status': 'FAILED_PRECONDITION'}}
+[gemini_meta] generation failed: 400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'The File y4x4yjcjhjrz is not in an ACTIVE state and usage is not allowed.', 'status': 'FAILED_PRECONDITION'}}
+[api_uploader] scheduled Pure Talent 191 -> qdo8HGjQ-Qo at 2026-09-12T06:00:00Z
+[2026-08-15 01:46:33]   uploaded+scheduled: https://www.youtube.com/shorts/qdo8HGjQ-Qo
+[2026-08-15 01:46:33] [6/30] Processing https://www.facebook.com/reel/393538917185418/
+[2026-08-15 01:46:33] Processing https://www.facebook.com/reel/393538917185418/ -> 'Pure Talent 192' scheduled 2026-09-12 07:00:00
+[2026-08-15 01:46:37]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\393538917185418.mp4
+[2026-08-15 01:46:53]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\393538917185418_edited.mp4
+[gemini_meta] gemini-2.5-flash failed: 400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'The File d7n4ean4vwpt is not in an ACTIVE state and usage is not allowed.', 'status': 'FAILED_PRECONDITION'}}
+[gemini_meta] generation failed: 400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'The File d7n4ean4vwpt is not in an ACTIVE state and usage is not allowed.', 'status': 'FAILED_PRECONDITION'}}
+[api_uploader] 96% uploaded
+[api_uploader] scheduled Pure Talent 192 -> WDPFK9Sy2Bo at 2026-09-12T11:00:00Z
+[2026-08-15 01:46:58]   uploaded+scheduled: https://www.youtube.com/shorts/WDPFK9Sy2Bo
+[2026-08-15 01:46:58] [7/30] Processing https://www.facebook.com/reel/3256491597963395/
+[2026-08-15 01:46:58] Processing https://www.facebook.com/reel/3256491597963395/ -> 'Pure Talent 193' scheduled 2026-09-12 12:00:00
+[2026-08-15 01:47:04]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\3256491597963395.mp4
+[2026-08-15 01:47:04]   307s exceeds the 178s Shorts limit -- trimming 129.8s off the start to fit.
+[2026-08-15 01:48:25]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\3256491597963395_edited.mp4
+[gemini_meta] gemini-2.5-flash failed: 400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'The File hr21fdi7v393 is not in an ACTIVE state and usage is not allowed.', 'status': 'FAILED_PRECONDITION'}}
+[gemini_meta] generation failed: 400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'The File hr21fdi7v393 is not in an ACTIVE state and usage is not allowed.', 'status': 'FAILED_PRECONDITION'}}
+[api_uploader] 20% uploaded
+[api_uploader] 40% uploaded
+[api_uploader] 59% uploaded
+[api_uploader] 79% uploaded
+[api_uploader] 99% uploaded
+[api_uploader] scheduled Pure Talent 193 -> JlVI4dkouEE at 2026-09-12T16:00:00Z
+[2026-08-15 01:48:35]   uploaded+scheduled: https://www.youtube.com/shorts/JlVI4dkouEE
+[2026-08-15 01:48:35] [8/30] Processing https://www.facebook.com/reel/1068429729182388/
+[2026-08-15 01:48:35] Processing https://www.facebook.com/reel/1068429729182388/ -> 'Pure Talent 194' scheduled 2026-09-12 17:00:00
+[2026-08-15 01:48:41]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1068429729182388.mp4
+[2026-08-15 01:49:35]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1068429729182388_edited.mp4
+[gemini_meta] gemini-2.5-flash failed: 400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'The File tv13vg4zadjg is not in an ACTIVE state and usage is not allowed.', 'status': 'FAILED_PRECONDITION'}}
+[gemini_meta] generation failed: 400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'The File tv13vg4zadjg is not in an ACTIVE state and usage is not allowed.', 'status': 'FAILED_PRECONDITION'}}
+[api_uploader] 36% uploaded
+[api_uploader] 72% uploaded
+[api_uploader] scheduled Pure Talent 194 -> S-YUbYlmbug at 2026-09-12T21:00:00Z
+[2026-08-15 01:49:42]   uploaded+scheduled: https://www.youtube.com/shorts/S-YUbYlmbug
+[2026-08-15 01:49:42] [9/30] Processing https://www.facebook.com/reel/742583648237126/
+[2026-08-15 01:49:42] Processing https://www.facebook.com/reel/742583648237126/ -> 'Pure Talent 195' scheduled 2026-09-12 22:00:00
+[2026-08-15 01:49:47]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\742583648237126.mp4
+[2026-08-15 01:50:38]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\742583648237126_edited.mp4
+[gemini_meta] gemini-2.5-flash failed: 400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'The File kd4abh6ydz04 is not in an ACTIVE state and usage is not allowed.', 'status': 'FAILED_PRECONDITION'}}
+[gemini_meta] generation failed: 400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'The File kd4abh6ydz04 is not in an ACTIVE state and usage is not allowed.', 'status': 'FAILED_PRECONDITION'}}
+[api_uploader] 42% uploaded
+[api_uploader] 83% uploaded
+[api_uploader] scheduled Pure Talent 195 -> 0WU2JqwTyIs at 2026-09-13T02:00:00Z
+[2026-08-15 01:50:46]   uploaded+scheduled: https://www.youtube.com/shorts/0WU2JqwTyIs
+[2026-08-15 01:50:46] [10/30] Processing https://www.facebook.com/reel/27278535298483274/
+[2026-08-15 01:50:46] Processing https://www.facebook.com/reel/27278535298483274/ -> 'Pure Talent 196' scheduled 2026-09-13 03:00:00
+[2026-08-15 01:50:49]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\27278535298483274.mp4
+[2026-08-15 01:50:49]   11.9s is shorter than the 30s minimum -- skipping this reel entirely (marked 'skipped', not retried).
+[2026-08-15 01:50:49] [11/30] Processing https://www.facebook.com/reel/460718710031618/
+[2026-08-15 01:50:49] Processing https://www.facebook.com/reel/460718710031618/ -> 'Pure Talent 196' scheduled 2026-09-13 03:00:00
+[2026-08-15 01:50:54]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\460718710031618.mp4
+[2026-08-15 01:50:54]   562s exceeds the 178s Shorts limit -- trimming 384.1s off the start to fit.
+[2026-08-15 01:51:55]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\460718710031618_edited.mp4
+[gemini_meta] gemini-2.5-flash failed: 400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'The File 8rpehc7ko55k is not in an ACTIVE state and usage is not allowed.', 'status': 'FAILED_PRECONDITION'}}
+[gemini_meta] generation failed: 400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'The File 8rpehc7ko55k is not in an ACTIVE state and usage is not allowed.', 'status': 'FAILED_PRECONDITION'}}
+[api_uploader] 26% uploaded
+[api_uploader] 52% uploaded
+[api_uploader] 79% uploaded
+[api_uploader] scheduled Pure Talent 196 -> 7GIHN0bLDUo at 2026-09-13T07:00:00Z
+[2026-08-15 01:52:04]   uploaded+scheduled: https://www.youtube.com/shorts/7GIHN0bLDUo
+[2026-08-15 01:52:04] [12/30] Processing https://www.facebook.com/reel/910777251271298/
+[2026-08-15 01:52:04] Processing https://www.facebook.com/reel/910777251271298/ -> 'Pure Talent 197' scheduled 2026-09-13 08:00:00
+[2026-08-15 01:52:10]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\910777251271298.mp4
+[2026-08-15 01:52:10]   29.1s is shorter than the 30s minimum -- skipping this reel entirely (marked 'skipped', not retried).
+[2026-08-15 01:52:10] [13/30] Processing https://www.facebook.com/reel/3726805184253243/
+[2026-08-15 01:52:10] Processing https://www.facebook.com/reel/3726805184253243/ -> 'Pure Talent 197' scheduled 2026-09-13 08:00:00
+[2026-08-15 01:52:15]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\3726805184253243.mp4
+[2026-08-15 01:52:15]   285s exceeds the 178s Shorts limit -- trimming 107.2s off the start to fit.
+[2026-08-15 01:53:23]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\3726805184253243_edited.mp4
+[gemini_meta] gemini-2.5-flash failed: 400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'The File 3xo3uawxzi6y is not in an ACTIVE state and usage is not allowed.', 'status': 'FAILED_PRECONDITION'}}
+[gemini_meta] generation failed: 400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'The File 3xo3uawxzi6y is not in an ACTIVE state and usage is not allowed.', 'status': 'FAILED_PRECONDITION'}}
+[api_uploader] 27% uploaded
+[api_uploader] 54% uploaded
+[api_uploader] 81% uploaded
+[api_uploader] scheduled Pure Talent 197 -> aLGVw9SQ6UU at 2026-09-13T12:00:00Z
+[2026-08-15 01:53:31]   uploaded+scheduled: https://www.youtube.com/shorts/aLGVw9SQ6UU
+[2026-08-15 01:53:31] Batch finished. succeeded=10 attempted=13 target=10
