@@ -1,0 +1,63 @@
+[worker] using YouTube Data API uploader (OAuth token present)
+[worker] running: C:\hostedtoolcache\windows\Python\3.12.10\x64\python.exe D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py --batch-size 2 --start-from-csv --max-runtime 45 --channel chromium --yt-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\youtube_cookies.json --fb-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\facebook_cookies.json --yt-upload-mode api
+[2026-08-15 05:20:19] Upload mode: YouTube Data API (OAuth).
+[2026-08-15 05:20:19] Continuing schedule from CSV: last=2026-09-13 08:00:00 next=2026-09-13 13:00:00
+[2026-08-15 05:20:19] Runtime budget: 45 minutes (deadline set).
+[2026-08-15 05:20:19] Starting batch: target=2 first_schedule=2026-09-13 13:00:00 interval=5:00:00 candidates_available=2186
+[2026-08-15 05:20:19] [1/6] Processing https://www.facebook.com/reel/1547515926687136/
+[2026-08-15 05:20:19] Processing https://www.facebook.com/reel/1547515926687136/ -> 'Pure Talent 198' scheduled 2026-09-13 13:00:00
+[2026-08-15 05:20:24]   FAILED for https://www.facebook.com/reel/1547515926687136/: RuntimeError: yt-dlp failed for https://www.facebook.com/reel/1547515926687136/:
+WARNING: You have requested merging of multiple formats but ffmpeg is not installed. The formats won't be merged
+
+[2026-08-15 05:20:24] Traceback (most recent call last):
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py", line 314, in process_one
+    downloaded_path = download_reel(reel_url, reel_id, fb_cookies)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py", line 256, in download_reel
+    raise RuntimeError(f"yt-dlp failed for {reel_url}:\n{result.stderr[-2000:]}")
+RuntimeError: yt-dlp failed for https://www.facebook.com/reel/1547515926687136/:
+WARNING: You have requested merging of multiple formats but ffmpeg is not installed. The formats won't be merged
+
+
+[2026-08-15 05:20:24]   leaving as 'remaining' for retry, moving to next candidate.
+[2026-08-15 05:20:24] [2/6] Processing https://www.facebook.com/reel/2496010560843383/
+[2026-08-15 05:20:24] Processing https://www.facebook.com/reel/2496010560843383/ -> 'Pure Talent 198' scheduled 2026-09-13 13:00:00
+[2026-08-15 05:20:29]   FAILED for https://www.facebook.com/reel/2496010560843383/: RuntimeError: yt-dlp failed for https://www.facebook.com/reel/2496010560843383/:
+WARNING: You have requested merging of multiple formats but ffmpeg is not installed. The formats won't be merged
+
+[2026-08-15 05:20:29] Traceback (most recent call last):
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py", line 314, in process_one
+    downloaded_path = download_reel(reel_url, reel_id, fb_cookies)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py", line 256, in download_reel
+    raise RuntimeError(f"yt-dlp failed for {reel_url}:\n{result.stderr[-2000:]}")
+RuntimeError: yt-dlp failed for https://www.facebook.com/reel/2496010560843383/:
+WARNING: You have requested merging of multiple formats but ffmpeg is not installed. The formats won't be merged
+
+
+[2026-08-15 05:20:29]   leaving as 'remaining' for retry, moving to next candidate.
+[2026-08-15 05:20:29] [3/6] Processing https://www.facebook.com/reel/2497373743743602/
+[2026-08-15 05:20:29] Processing https://www.facebook.com/reel/2497373743743602/ -> 'Pure Talent 198' scheduled 2026-09-13 13:00:00
+[2026-08-15 05:20:33]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\2497373743743602.mp4
+[2026-08-15 05:20:33]   FAILED for https://www.facebook.com/reel/2497373743743602/: FileNotFoundError: [WinError 2] The system cannot find the file specified
+[2026-08-15 05:20:33] Traceback (most recent call last):
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py", line 317, in process_one
+    duration = probe_duration(downloaded_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py", line 85, in probe_duration
+    result = subprocess.run(
+             ^^^^^^^^^^^^^^^
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\subprocess.py", line 1538, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+[2026-08-15 05:20:33]   leaving as 'remaining' for retry, moving to next candidate.
+[2026-08-15 05:20:33] WARNING: 3 failures in a row -- stopping this batch early instead of burning through the rest of the candidates. This usually means something structural broke (YouTube upload limit/verification prompt, expired login session, a Studio UI change) rather than a problem with individual reels. Check the error above (and any screenshot path it mentions) before starting another batch.
+[2026-08-15 05:20:33] Batch finished. succeeded=0 attempted=3 target=2
+[2026-08-15 05:20:33] WARNING: only 0/2 reels were successfully scheduled.
