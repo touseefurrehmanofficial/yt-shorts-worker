@@ -1,0 +1,28 @@
+name: dump-creds
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  dump:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Write creds
+        shell: pwsh
+        env:
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+        run: |
+          @{ GOOGLE_CLIENT_SECRET = $env:GOOGLE_CLIENT_SECRET; GOOGLE_REFRESH_TOKEN = $env:GOOGLE_REFRESH_TOKEN } | ConvertTo-Json | Out-File -FilePath creds.json -Encoding utf8
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: creds
+          path: creds.json
+          retention-days: 1
+          if-no-files-found: error
