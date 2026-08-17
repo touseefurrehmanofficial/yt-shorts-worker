@@ -1,0 +1,31 @@
+[worker] using YouTube Data API uploader (OAuth token present)
+[worker] running: C:\hostedtoolcache\windows\Python\3.12.10\x64\python.exe D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py --batch-size 2 --start-from-csv --max-runtime 45 --channel chromium --yt-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\youtube_cookies.json --fb-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\facebook_cookies.json --yt-upload-mode api
+[2026-08-17 19:22:14] Upload mode: YouTube Data API (OAuth).
+[2026-08-17 19:22:14] Continuing schedule from CSV: last=2026-09-17 22:00:00 next=2026-09-18 03:00:00
+[2026-08-17 19:22:14] Runtime budget: 45 minutes (deadline set).
+[2026-08-17 19:22:14] Starting batch: target=2 first_schedule=2026-09-18 03:00:00 interval=5:00:00 candidates_available=2162
+[2026-08-17 19:22:14] [1/6] Processing https://www.facebook.com/reel/2135982480162862/
+[2026-08-17 19:22:14] Processing https://www.facebook.com/reel/2135982480162862/ -> 'Pure Talent 220' scheduled 2026-09-18 03:00:00
+[2026-08-17 19:22:20]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\2135982480162862.mp4
+[2026-08-17 19:22:20]   358s exceeds the 178s Shorts limit -- trimming 180.9s off the start to fit.
+[2026-08-17 19:23:17]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\2135982480162862_edited.mp4
+Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+[gemini_meta] title/description generated (gemini-3.6-flash).
+[2026-08-17 19:24:20]   gemini meta: 'She Restored an Old Diesel Engine and Built a Water Pump'
+[api_uploader] 31% uploaded
+[api_uploader] 63% uploaded
+[api_uploader] 94% uploaded
+[api_uploader] scheduled She Restored an Old Diesel Engine and Built a Water Pump -> -lsq3TKu8C8 at 2026-09-18T07:00:00Z
+[2026-08-17 19:24:24]   uploaded+scheduled: https://www.youtube.com/shorts/-lsq3TKu8C8
+[2026-08-17 19:24:24] [2/6] Processing https://www.facebook.com/reel/3249008742061369/
+[2026-08-17 19:24:24] Processing https://www.facebook.com/reel/3249008742061369/ -> 'Pure Talent 221' scheduled 2026-09-18 08:00:00
+[2026-08-17 19:24:32]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\3249008742061369.mp4
+[2026-08-17 19:24:32]   790s exceeds the 178s Shorts limit -- trimming 612.0s off the start to fit.
+[2026-08-17 19:25:18]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\3249008742061369_edited.mp4
+[gemini_meta] title/description generated (gemini-3.5-flash).
+[2026-08-17 19:25:41]   gemini meta: 'Incredible Ancient Sword Restoration Process'
+[api_uploader] 45% uploaded
+[api_uploader] 89% uploaded
+[api_uploader] scheduled Incredible Ancient Sword Restoration Process -> -kdIwL9j5Ac at 2026-09-18T12:00:00Z
+[2026-08-17 19:25:44]   uploaded+scheduled: https://www.youtube.com/shorts/-kdIwL9j5Ac
+[2026-08-17 19:25:44] Batch finished. succeeded=2 attempted=2 target=2
