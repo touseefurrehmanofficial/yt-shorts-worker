@@ -26,7 +26,9 @@ if sys.stderr is None:
 ENABLED = True
 
 MODELS = ("gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash",
-          "gemini-2.5-flash")
+          "gemini-3.1-flash-lite", "gemini-2.5-flash")
+
+QUOTA_HIT = False  # set when every model exhausted with quota errors
 
 _CALL_COUNT = 0
 
@@ -74,6 +76,8 @@ def _load_key() -> str:
 
 def generate(video_path, timeout_seconds: int = 240):
     """Return (title, description) for the video, or (None, None)."""
+    global QUOTA_HIT
+    QUOTA_HIT = False
     try:
         from google import genai
     except Exception as exc:
@@ -142,6 +146,9 @@ def generate(video_path, timeout_seconds: int = 240):
                               flush=True)
                 break
         print(f"[gemini_meta] generation failed: {last_err}", flush=True)
+        if any(m in last_err for m in ("429", "RESOURCE_EXHAUSTED", "quota",
+                                       "Quota")):
+            QUOTA_HIT = True
         return None, None
     except Exception as exc:
         print(f"[gemini_meta] upload/generation failed: {exc}", flush=True)
