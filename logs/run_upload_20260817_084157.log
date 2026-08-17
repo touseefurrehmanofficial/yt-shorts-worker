@@ -1,0 +1,96 @@
+[worker] using YouTube Data API uploader (OAuth token present)
+[worker] running: C:\hostedtoolcache\windows\Python\3.12.10\x64\python.exe D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py --batch-size 10 --start-from-csv --max-runtime 270 --channel chromium --yt-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\youtube_cookies.json --fb-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\facebook_cookies.json --yt-upload-mode api
+[2026-08-17 08:41:57] Upload mode: YouTube Data API (OAuth).
+[2026-08-17 08:41:57] Continuing schedule from CSV: last=2026-09-17 22:00:00 next=2026-09-18 03:00:00
+[2026-08-17 08:41:57] Runtime budget: 270 minutes (deadline set).
+[2026-08-17 08:41:57] Starting batch: target=10 first_schedule=2026-09-18 03:00:00 interval=5:00:00 candidates_available=2162
+[2026-08-17 08:41:57] [1/30] Processing https://www.facebook.com/reel/2135982480162862/
+[2026-08-17 08:41:57] Processing https://www.facebook.com/reel/2135982480162862/ -> 'Pure Talent 220' scheduled 2026-09-18 03:00:00
+[2026-08-17 08:42:05]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\2135982480162862.mp4
+[2026-08-17 08:42:05]   358s exceeds the 178s Shorts limit -- trimming 180.9s off the start to fit.
+[2026-08-17 08:42:53]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\2135982480162862_edited.mp4
+Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+[gemini_meta] title/description generated (gemini-2.5-flash).
+[2026-08-17 08:43:31]   gemini meta: 'Watch this talented woman restore a rusty engine and water pump'
+[2026-08-17 08:43:31]   FAILED for https://www.facebook.com/reel/2135982480162862/: RefreshError: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+[2026-08-17 08:43:31] Traceback (most recent call last):
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py", line 352, in process_one
+    link = api_upload(edited_path, video_title, description, schedule_dt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\api_uploader.py", line 78, in upload_and_schedule_api
+    youtube = _build_youtube()
+              ^^^^^^^^^^^^^^^^
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\api_uploader.py", line 65, in _build_youtube
+    creds.refresh(Request())
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\google\auth\credentials.py", line 517, in refresh
+    self._perform_refresh_token(request)
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\google\oauth2\credentials.py", line 435, in _perform_refresh_token
+    ) = reauth.refresh_grant(
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\google\oauth2\reauth.py", line 370, in refresh_grant
+    _client._handle_error_response(response_data, retryable_error)
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\google\oauth2\_client.py", line 73, in _handle_error_response
+    raise exceptions.RefreshError(
+google.auth.exceptions.RefreshError: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+
+[2026-08-17 08:43:31]   leaving as 'remaining' for retry, moving to next candidate.
+[2026-08-17 08:43:31] [2/30] Processing https://www.facebook.com/reel/3249008742061369/
+[2026-08-17 08:43:31] Processing https://www.facebook.com/reel/3249008742061369/ -> 'Pure Talent 220' scheduled 2026-09-18 03:00:00
+[2026-08-17 08:43:36]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\3249008742061369.mp4
+[2026-08-17 08:43:37]   790s exceeds the 178s Shorts limit -- trimming 612.0s off the start to fit.
+[2026-08-17 08:44:16]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\3249008742061369_edited.mp4
+[gemini_meta] title/description generated (gemini-2.5-flash).
+[2026-08-17 08:44:49]   gemini meta: 'Woman crafts stunning engraved sword from raw metal'
+[2026-08-17 08:44:49]   FAILED for https://www.facebook.com/reel/3249008742061369/: RefreshError: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+[2026-08-17 08:44:49] Traceback (most recent call last):
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py", line 352, in process_one
+    link = api_upload(edited_path, video_title, description, schedule_dt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\api_uploader.py", line 78, in upload_and_schedule_api
+    youtube = _build_youtube()
+              ^^^^^^^^^^^^^^^^
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\api_uploader.py", line 65, in _build_youtube
+    creds.refresh(Request())
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\google\auth\credentials.py", line 517, in refresh
+    self._perform_refresh_token(request)
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\google\oauth2\credentials.py", line 435, in _perform_refresh_token
+    ) = reauth.refresh_grant(
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\google\oauth2\reauth.py", line 370, in refresh_grant
+    _client._handle_error_response(response_data, retryable_error)
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\google\oauth2\_client.py", line 73, in _handle_error_response
+    raise exceptions.RefreshError(
+google.auth.exceptions.RefreshError: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+
+[2026-08-17 08:44:49]   leaving as 'remaining' for retry, moving to next candidate.
+[2026-08-17 08:44:49] [3/30] Processing https://www.facebook.com/reel/718517536668543/
+[2026-08-17 08:44:49] Processing https://www.facebook.com/reel/718517536668543/ -> 'Pure Talent 220' scheduled 2026-09-18 03:00:00
+[2026-08-17 08:44:52]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\718517536668543.mp4
+[2026-08-17 08:45:04]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\718517536668543_edited.mp4
+[gemini_meta] title/description generated (gemini-2.5-flash).
+[2026-08-17 08:45:18]   gemini meta: 'Pure Talent: Witness incredible precision crafting'
+[2026-08-17 08:45:19]   FAILED for https://www.facebook.com/reel/718517536668543/: RefreshError: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+[2026-08-17 08:45:19] Traceback (most recent call last):
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py", line 352, in process_one
+    link = api_upload(edited_path, video_title, description, schedule_dt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\api_uploader.py", line 78, in upload_and_schedule_api
+    youtube = _build_youtube()
+              ^^^^^^^^^^^^^^^^
+  File "D:\a\yt-shorts-worker\yt-shorts-worker\scripts\api_uploader.py", line 65, in _build_youtube
+    creds.refresh(Request())
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\google\auth\credentials.py", line 517, in refresh
+    self._perform_refresh_token(request)
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\google\oauth2\credentials.py", line 435, in _perform_refresh_token
+    ) = reauth.refresh_grant(
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\google\oauth2\reauth.py", line 370, in refresh_grant
+    _client._handle_error_response(response_data, retryable_error)
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\google\oauth2\_client.py", line 73, in _handle_error_response
+    raise exceptions.RefreshError(
+google.auth.exceptions.RefreshError: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+
+[2026-08-17 08:45:19]   leaving as 'remaining' for retry, moving to next candidate.
+[2026-08-17 08:45:19] WARNING: 3 failures in a row -- stopping this batch early instead of burning through the rest of the candidates. This usually means something structural broke (YouTube upload limit/verification prompt, expired login session, a Studio UI change) rather than a problem with individual reels. Check the error above (and any screenshot path it mentions) before starting another batch.
+[2026-08-17 08:45:19] Batch finished. succeeded=0 attempted=3 target=10
+[2026-08-17 08:45:19] WARNING: only 0/10 reels were successfully scheduled.
