@@ -25,7 +25,20 @@ if sys.stderr is None:
 
 ENABLED = True
 
-MODELS = ("gemini-3.7-flash", "gemini-3.6-flash", "gemini-2.5-flash")
+MODELS = ("gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash",
+          "gemini-2.5-flash")
+
+_CALL_COUNT = 0
+
+
+def _rotated_models() -> tuple:
+    """Round-robin start point across MODELS so consecutive videos hit
+    different models first (spreads quota pressure and avoids a perfectly
+    uniform single-model pattern, which looks scripted)."""
+    global _CALL_COUNT
+    _CALL_COUNT += 1
+    shift = _CALL_COUNT % len(MODELS)
+    return MODELS[shift:] + MODELS[:shift]
 
 PROMPT = (
     "You write titles and descriptions for a YouTube Shorts channel that "
@@ -93,31 +106,41 @@ def generate(video_path, timeout_seconds: int = 240):
                 return None, None
             time.sleep(5)
         last_err = "no model responded"
-        for model in MODELS:
-            try:
-                resp = client.models.generate_content(
-                    model=model,
-                    contents=[uploaded, PROMPT],
-                )
-                text = (resp.text or "").strip()
-                match = re.search(r"\{.*\}", text, re.S)
-                data = json.loads(match.group(0)) if match else {}
-                title = str(data.get("title", "")).strip()
-                description = str(data.get("description", "")).strip()
-                if title and description:
-                    print(f"[gemini_meta] title/description generated "
-                          f"({model}).", flush=True)
-                    return title[:100], description[:4990]
-                last_err = f"empty/invalid fields in: {text[:200]!r}"
-            except Exception as exc:
-                last_err = str(exc)
-                transient = any(m in str(exc) for m in
-                                ("503", "429", "500", "UNAVAILABLE",
-                                 "RESOURCE_EXHAUSTED"))
-                if not transient and "404" not in str(exc) \
-                        and "not found" not in str(exc).lower():
-                    print(f"[gemini_meta] {model} failed: {exc}", flush=True)
-                    break
+        for model in _rotated_models():
+            attempts = 0
+            while True:
+                attempts += 1
+                try:
+                    resp = client.models.generate_content(
+                        model=model,
+                        contents=[uploaded, PROMPT],
+                    )
+                    text = (resp.text or "").strip()
+                    match = re.search(r"\{.*\}", text, re.S)
+                    data = json.loads(match.group(0)) if match else {}
+                    title = str(data.get("title", "")).strip()
+                    description = str(data.get("description", "")).strip()
+                    if title and description:
+                        print(f"[gemini_meta] title/description generated "
+                              f"({model}).", flush=True)
+                        return title[:100], description[:4990]
+                    last_err = f"empty/invalid fields in: {text[:200]!r}"
+                except Exception as exc:
+                    last_err = str(exc)
+                    busy = any(m in str(exc) for m in
+                               ("503", "500", "UNAVAILABLE"))
+                    transient = busy or any(m in str(exc) for m in
+                                            ("429", "RESOURCE_EXHAUSTED"))
+                    if busy and attempts < 2:
+                        print(f"[gemini_meta] {model} busy -- retrying in "
+                              f"40s", flush=True)
+                        time.sleep(40)
+                        continue
+                    if not transient and "404" not in str(exc) \
+                            and "not found" not in str(exc).lower():
+                        print(f"[gemini_meta] {model} failed: {exc}",
+                              flush=True)
+                break
         print(f"[gemini_meta] generation failed: {last_err}", flush=True)
         return None, None
     except Exception as exc:
