@@ -25,7 +25,7 @@ if sys.stderr is None:
 
 ENABLED = True
 
-MODELS = ("gemini-2.5-flash", "gemini-2.0-flash")
+MODELS = ("gemini-2.5-flash", "gemini-3.6-flash")
 
 PROMPT = (
     "You write titles and descriptions for a YouTube Shorts channel that "
