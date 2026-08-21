@@ -1,0 +1,122 @@
+[worker] using YouTube Data API uploader (OAuth token present)
+[worker] running: C:\hostedtoolcache\windows\Python\3.12.10\x64\python.exe D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py --batch-size 10 --start-from-csv --max-runtime 270 --channel chromium --yt-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\youtube_cookies.json --fb-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\facebook_cookies.json --yt-upload-mode api
+[2026-08-21 08:38:22] Upload mode: YouTube Data API (OAuth).
+[2026-08-21 08:38:22] Continuing schedule from CSV: last=2026-09-28 18:00:00 next=2026-09-28 23:00:00
+[2026-08-21 08:38:22] Runtime budget: 270 minutes (deadline set).
+[2026-08-21 08:38:22] Starting batch: target=10 first_schedule=2026-09-28 23:00:00 interval=5:00:00 candidates_available=2095
+[2026-08-21 08:38:22] [1/30] Processing https://www.facebook.com/reel/1274059461125713/
+[2026-08-21 08:38:22] Processing https://www.facebook.com/reel/1274059461125713/ -> 'Pure Talent 272' scheduled 2026-09-28 23:00:00
+[2026-08-21 08:38:27]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1274059461125713.mp4
+[2026-08-21 08:38:42]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1274059461125713_edited.mp4
+Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+[gemini_meta] title/description generated (gemini-3.6-flash).
+[2026-08-21 08:39:01]   gemini meta: 'Skillful Young Mechanic Disassembles Old Diesel Engine'
+[api_uploader] scheduled Skillful Young Mechanic Disassembles Old Diesel Engine -> kTwtTlPp3FA at 2026-09-29T03:00:00Z
+[2026-08-21 08:39:03]   uploaded+scheduled: https://www.youtube.com/shorts/kTwtTlPp3FA
+[2026-08-21 08:39:03] [2/30] Processing https://www.facebook.com/reel/967583902323938/
+[2026-08-21 08:39:03] Processing https://www.facebook.com/reel/967583902323938/ -> 'Pure Talent 273' scheduled 2026-09-29 04:00:00
+[2026-08-21 08:39:07]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\967583902323938.mp4
+[2026-08-21 08:39:07]   20.2s is shorter than the 30s minimum -- skipping this reel entirely (marked 'skipped', not retried).
+[2026-08-21 08:39:07] [3/30] Processing https://www.facebook.com/reel/4555693431320577/
+[2026-08-21 08:39:07] Processing https://www.facebook.com/reel/4555693431320577/ -> 'Pure Talent 273' scheduled 2026-09-29 04:00:00
+[2026-08-21 08:39:11]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\4555693431320577.mp4
+[2026-08-21 08:39:11]   534s exceeds the 178s Shorts limit -- trimming 356.9s off the start to fit.
+[2026-08-21 08:40:08]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\4555693431320577_edited.mp4
+[gemini_meta] title/description generated (gemini-3.5-flash).
+[2026-08-21 08:40:34]   gemini meta: 'Restoring a 100-Year-Old Vintage Film Projector!'
+[api_uploader] 29% uploaded
+[api_uploader] 58% uploaded
+[api_uploader] 87% uploaded
+[api_uploader] scheduled Restoring a 100-Year-Old Vintage Film Projector! -> Tpm9O1Qr-bQ at 2026-09-29T08:00:00Z
+[2026-08-21 08:40:37]   uploaded+scheduled: https://www.youtube.com/shorts/Tpm9O1Qr-bQ
+[2026-08-21 08:40:37] [4/30] Processing https://www.facebook.com/reel/1029925687619672/
+[2026-08-21 08:40:37] Processing https://www.facebook.com/reel/1029925687619672/ -> 'Pure Talent 274' scheduled 2026-09-29 09:00:00
+[2026-08-21 08:40:48]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1029925687619672.mp4
+[2026-08-21 08:40:49]   1155s exceeds the 178s Shorts limit -- trimming 977.8s off the start to fit.
+[2026-08-21 08:41:28]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1029925687619672_edited.mp4
+[gemini_meta] title/description generated (gemini-3.1-flash-lite).
+[2026-08-21 08:41:42]   gemini meta: 'DIY Tool Hacks: Building a Heavy-Duty Electric Wire Stripper'
+[api_uploader] 43% uploaded
+[api_uploader] 87% uploaded
+[api_uploader] scheduled DIY Tool Hacks: Building a Heavy-Duty Electric Wire Stripper -> Fs1y02NC9hs at 2026-09-29T13:00:00Z
+[2026-08-21 08:41:45]   uploaded+scheduled: https://www.youtube.com/shorts/Fs1y02NC9hs
+[2026-08-21 08:41:45] [5/30] Processing https://www.facebook.com/reel/439428838367291/
+[2026-08-21 08:41:45] Processing https://www.facebook.com/reel/439428838367291/ -> 'Pure Talent 275' scheduled 2026-09-29 14:00:00
+[2026-08-21 08:41:51]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\439428838367291.mp4
+[2026-08-21 08:41:51]   614s exceeds the 178s Shorts limit -- trimming 436.4s off the start to fit.
+[2026-08-21 08:43:15]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\439428838367291_edited.mp4
+[gemini_meta] title/description generated (gemini-2.5-flash).
+[2026-08-21 08:43:37]   gemini meta: 'Pure Talent: Watch Her Expertly Assemble and Start This Engine'
+[api_uploader] 28% uploaded
+[api_uploader] 56% uploaded
+[api_uploader] 84% uploaded
+[api_uploader] scheduled Pure Talent: Watch Her Expertly Assemble and Start This Engine -> CBYD42nGSBU at 2026-09-29T18:00:00Z
+[2026-08-21 08:43:40]   uploaded+scheduled: https://www.youtube.com/shorts/CBYD42nGSBU
+[2026-08-21 08:43:40] [6/30] Processing https://www.facebook.com/reel/3209151159258387/
+[2026-08-21 08:43:40] Processing https://www.facebook.com/reel/3209151159258387/ -> 'Pure Talent 276' scheduled 2026-09-29 19:00:00
+[2026-08-21 08:43:45]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\3209151159258387.mp4
+[2026-08-21 08:43:46]   384s exceeds the 178s Shorts limit -- trimming 206.6s off the start to fit.
+[2026-08-21 08:45:15]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\3209151159258387_edited.mp4
+[gemini_meta] gemini-3.7-flash busy -- retrying in 40s
+[gemini_meta] title/description generated (gemini-3.7-flash).
+[2026-08-21 08:46:24]   gemini meta: 'Restoring and Firing a Miniature Working Cannon'
+[api_uploader] 23% uploaded
+[api_uploader] 47% uploaded
+[api_uploader] 70% uploaded
+[api_uploader] 93% uploaded
+[api_uploader] scheduled Restoring and Firing a Miniature Working Cannon -> xKPuw6rgUwU at 2026-09-29T23:00:00Z
+[2026-08-21 08:46:28]   uploaded+scheduled: https://www.youtube.com/shorts/xKPuw6rgUwU
+[2026-08-21 08:46:28] [7/30] Processing https://www.facebook.com/reel/990977530197219/
+[2026-08-21 08:46:28] Processing https://www.facebook.com/reel/990977530197219/ -> 'Pure Talent 277' scheduled 2026-09-30 00:00:00
+[2026-08-21 08:46:32]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\990977530197219.mp4
+[2026-08-21 08:46:46]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\990977530197219_edited.mp4
+[gemini_meta] title/description generated (gemini-3.6-flash).
+[2026-08-21 08:47:23]   gemini meta: 'Watching a Master Craft a Clay Teapot by Hand'
+[api_uploader] scheduled Watching a Master Craft a Clay Teapot by Hand -> nLbFYtFBUi0 at 2026-09-30T04:00:00Z
+[2026-08-21 08:47:25]   uploaded+scheduled: https://www.youtube.com/shorts/nLbFYtFBUi0
+[2026-08-21 08:47:25] [8/30] Processing https://www.facebook.com/reel/1644177449931347/
+[2026-08-21 08:47:25] Processing https://www.facebook.com/reel/1644177449931347/ -> 'Pure Talent 278' scheduled 2026-09-30 05:00:00
+[2026-08-21 08:47:28]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1644177449931347.mp4
+[2026-08-21 08:47:41]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1644177449931347_edited.mp4
+[gemini_meta] title/description generated (gemini-3.5-flash).
+[2026-08-21 08:47:55]   gemini meta: 'The Precision on This Handmade Clay Teapot Is Unreal!'
+[api_uploader] scheduled The Precision on This Handmade Clay Teapot Is Unreal! -> tKNE8aWYjQ4 at 2026-09-30T09:00:00Z
+[2026-08-21 08:47:57]   uploaded+scheduled: https://www.youtube.com/shorts/tKNE8aWYjQ4
+[2026-08-21 08:47:57] [9/30] Processing https://www.facebook.com/reel/1226039691302332/
+[2026-08-21 08:47:57] Processing https://www.facebook.com/reel/1226039691302332/ -> 'Pure Talent 279' scheduled 2026-09-30 10:00:00
+[2026-08-21 08:48:05]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1226039691302332.mp4
+[2026-08-21 08:48:05]   632s exceeds the 178s Shorts limit -- trimming 455.0s off the start to fit.
+[2026-08-21 08:48:55]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1226039691302332_edited.mp4
+[gemini_meta] title/description generated (gemini-3.1-flash-lite).
+[2026-08-21 08:49:10]   gemini meta: 'Woman Expertly Restores Antique Diesel Engine'
+[api_uploader] 36% uploaded
+[api_uploader] 73% uploaded
+[api_uploader] scheduled Woman Expertly Restores Antique Diesel Engine -> bJ9bLNdKw0Q at 2026-09-30T14:00:00Z
+[2026-08-21 08:49:13]   uploaded+scheduled: https://www.youtube.com/shorts/bJ9bLNdKw0Q
+[2026-08-21 08:49:13] [10/30] Processing https://www.facebook.com/reel/1061911456135938/
+[2026-08-21 08:49:13] Processing https://www.facebook.com/reel/1061911456135938/ -> 'Pure Talent 280' scheduled 2026-09-30 15:00:00
+[2026-08-21 08:49:19]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1061911456135938.mp4
+[2026-08-21 08:49:19]   500s exceeds the 178s Shorts limit -- trimming 322.9s off the start to fit.
+[2026-08-21 08:50:47]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1061911456135938_edited.mp4
+[gemini_meta] title/description generated (gemini-2.5-flash).
+[2026-08-21 08:51:07]   gemini meta: 'Watch this amazing razor blade sharpener restoration!'
+[api_uploader] 21% uploaded
+[api_uploader] 42% uploaded
+[api_uploader] 63% uploaded
+[api_uploader] 84% uploaded
+[api_uploader] scheduled Watch this amazing razor blade sharpener restoration! -> 6WZF87AYweU at 2026-09-30T19:00:00Z
+[2026-08-21 08:51:11]   uploaded+scheduled: https://www.youtube.com/shorts/6WZF87AYweU
+[2026-08-21 08:51:11] [11/30] Processing https://www.facebook.com/reel/27406819428974598/
+[2026-08-21 08:51:11] Processing https://www.facebook.com/reel/27406819428974598/ -> 'Pure Talent 281' scheduled 2026-09-30 20:00:00
+[2026-08-21 08:51:16]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\27406819428974598.mp4
+[2026-08-21 08:51:16]   9.6s is shorter than the 30s minimum -- skipping this reel entirely (marked 'skipped', not retried).
+[2026-08-21 08:51:16] [12/30] Processing https://www.facebook.com/reel/3950515515211634/
+[2026-08-21 08:51:16] Processing https://www.facebook.com/reel/3950515515211634/ -> 'Pure Talent 281' scheduled 2026-09-30 20:00:00
+[2026-08-21 08:51:20]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\3950515515211634.mp4
+[2026-08-21 08:51:32]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\3950515515211634_edited.mp4
+[gemini_meta] gemini-3.7-flash busy -- retrying in 40s
+[gemini_meta] title/description generated (gemini-3.6-flash).
+[2026-08-21 08:52:56]   gemini meta: 'Impressive Mechanic Skills: Young Woman Restores an Old Engine'
+[api_uploader] scheduled Impressive Mechanic Skills: Young Woman Restores an Old Engine -> K0pclzhD80o at 2026-10-01T00:00:00Z
+[2026-08-21 08:52:58]   uploaded+scheduled: https://www.youtube.com/shorts/K0pclzhD80o
+[2026-08-21 08:52:58] Batch finished. succeeded=10 attempted=12 target=10
