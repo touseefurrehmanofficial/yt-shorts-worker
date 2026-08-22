@@ -1,0 +1,128 @@
+[worker] using YouTube Data API uploader (OAuth token present)
+[worker] running: C:\hostedtoolcache\windows\Python\3.12.10\x64\python.exe D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py --batch-size 10 --start-from-csv --max-runtime 270 --channel chromium --yt-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\youtube_cookies.json --fb-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\facebook_cookies.json --yt-upload-mode api
+[2026-08-22 16:34:27] Upload mode: YouTube Data API (OAuth).
+[2026-08-22 16:34:27] Continuing schedule from CSV: last=2026-10-02 22:00:00 next=2026-10-03 03:00:00
+[2026-08-22 16:34:27] Runtime budget: 270 minutes (deadline set).
+[2026-08-22 16:34:27] Starting batch: target=10 first_schedule=2026-10-03 03:00:00 interval=5:00:00 candidates_available=2069
+[2026-08-22 16:34:27] [1/30] Processing https://www.facebook.com/reel/1342637944445007/
+[2026-08-22 16:34:27] Processing https://www.facebook.com/reel/1342637944445007/ -> 'Pure Talent 292' scheduled 2026-10-03 03:00:00
+[2026-08-22 16:34:34]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1342637944445007.mp4
+[2026-08-22 16:34:45]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1342637944445007_edited.mp4
+Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+[gemini_meta] title/description generated (gemini-3.6-flash).
+[2026-08-22 16:35:15]   gemini meta: 'The Secret Reason Clay Teapot Masters Make Spare Parts'
+[api_uploader] scheduled The Secret Reason Clay Teapot Masters Make Spare Parts -> xjHeEvntRBU at 2026-10-03T07:00:00Z
+[2026-08-22 16:35:18]   uploaded+scheduled: https://www.youtube.com/shorts/xjHeEvntRBU
+[2026-08-22 16:35:18] [2/30] Processing https://www.facebook.com/reel/1740642703236575/
+[2026-08-22 16:35:18] Processing https://www.facebook.com/reel/1740642703236575/ -> 'Pure Talent 293' scheduled 2026-10-03 08:00:00
+[2026-08-22 16:35:25]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1740642703236575.mp4
+[2026-08-22 16:35:25]   454s exceeds the 178s Shorts limit -- trimming 276.8s off the start to fit.
+[2026-08-22 16:36:53]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1740642703236575_edited.mp4
+[gemini_meta] title/description generated (gemini-3.5-flash).
+[2026-08-22 16:37:16]   gemini meta: 'She Completely Restores a Heavy-Duty Electric Motor From Scratch!'
+[api_uploader] 20% uploaded
+[api_uploader] 41% uploaded
+[api_uploader] 61% uploaded
+[api_uploader] 81% uploaded
+[api_uploader] scheduled She Completely Restores a Heavy-Duty Electric Motor From Scratch! -> X8wN5Wm3l8o at 2026-10-03T12:00:00Z
+[2026-08-22 16:37:20]   uploaded+scheduled: https://www.youtube.com/shorts/X8wN5Wm3l8o
+[2026-08-22 16:37:20] [3/30] Processing https://www.facebook.com/reel/1240059710591272/
+[2026-08-22 16:37:20] Processing https://www.facebook.com/reel/1240059710591272/ -> 'Pure Talent 294' scheduled 2026-10-03 13:00:00
+[2026-08-22 16:37:27]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1240059710591272.mp4
+[2026-08-22 16:37:27]   434s exceeds the 178s Shorts limit -- trimming 256.1s off the start to fit.
+[2026-08-22 16:38:53]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1240059710591272_edited.mp4
+[gemini_meta] title/description generated (gemini-3.1-flash-lite).
+[2026-08-22 16:39:12]   gemini meta: 'Fixing a Chainsaw Engine'
+[api_uploader] 22% uploaded
+[api_uploader] 45% uploaded
+[api_uploader] 67% uploaded
+[api_uploader] 89% uploaded
+[api_uploader] scheduled Fixing a Chainsaw Engine -> a5Jwy-Rwmsc at 2026-10-03T17:00:00Z
+[2026-08-22 16:39:16]   uploaded+scheduled: https://www.youtube.com/shorts/a5Jwy-Rwmsc
+[2026-08-22 16:39:16] [4/30] Processing https://www.facebook.com/reel/1968149587417901/
+[2026-08-22 16:39:16] Processing https://www.facebook.com/reel/1968149587417901/ -> 'Pure Talent 295' scheduled 2026-10-03 18:00:00
+[2026-08-22 16:39:20]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1968149587417901.mp4
+[2026-08-22 16:39:20]   21.8s is shorter than the 30s minimum -- skipping this reel entirely (marked 'skipped', not retried).
+[2026-08-22 16:39:20] [5/30] Processing https://www.facebook.com/reel/766767244378306/
+[2026-08-22 16:39:20] Processing https://www.facebook.com/reel/766767244378306/ -> 'Pure Talent 295' scheduled 2026-10-03 18:00:00
+[2026-08-22 16:39:26]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\766767244378306.mp4
+[2026-08-22 16:39:42]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\766767244378306_edited.mp4
+[gemini_meta] title/description generated (gemini-2.5-flash).
+[2026-08-22 16:39:57]   gemini meta: 'Watch Her Transform a Rusty Chainsaw into a Brand New One'
+[api_uploader] 94% uploaded
+[api_uploader] scheduled Watch Her Transform a Rusty Chainsaw into a Brand New One -> XShG0VdRjkk at 2026-10-03T22:00:00Z
+[2026-08-22 16:40:00]   uploaded+scheduled: https://www.youtube.com/shorts/XShG0VdRjkk
+[2026-08-22 16:40:00] [6/30] Processing https://www.facebook.com/reel/2055283618754017/
+[2026-08-22 16:40:00] Processing https://www.facebook.com/reel/2055283618754017/ -> 'Pure Talent 296' scheduled 2026-10-03 23:00:00
+[2026-08-22 16:40:05]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\2055283618754017.mp4
+[2026-08-22 16:40:25]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\2055283618754017_edited.mp4
+[gemini_meta] gemini-3.7-flash busy -- retrying in 40s
+[gemini_meta] title/description generated (gemini-3.6-flash).
+[2026-08-22 16:45:12]   gemini meta: 'Inspecting the Hidden Inner Seal of a Handcrafted Zisha Teapot'
+[api_uploader] 98% uploaded
+[api_uploader] scheduled Inspecting the Hidden Inner Seal of a Handcrafted Zisha Teapot -> ujhTmUMPabw at 2026-10-04T03:00:00Z
+[2026-08-22 16:45:14]   uploaded+scheduled: https://www.youtube.com/shorts/ujhTmUMPabw
+[2026-08-22 16:45:14] [7/30] Processing https://www.facebook.com/reel/311236921532033/
+[2026-08-22 16:45:14] Processing https://www.facebook.com/reel/311236921532033/ -> 'Pure Talent 297' scheduled 2026-10-04 04:00:00
+[2026-08-22 16:45:20]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\311236921532033.mp4
+[2026-08-22 16:46:38]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\311236921532033_edited.mp4
+[gemini_meta] title/description generated (gemini-3.6-flash).
+[2026-08-22 16:47:00]   gemini meta: 'Satisfying Restoration of an Old Vintage Gas Stove'
+[api_uploader] 25% uploaded
+[api_uploader] 50% uploaded
+[api_uploader] 74% uploaded
+[api_uploader] 99% uploaded
+[api_uploader] scheduled Satisfying Restoration of an Old Vintage Gas Stove -> DQNL2b1lxWs at 2026-10-04T08:00:00Z
+[2026-08-22 16:47:05]   uploaded+scheduled: https://www.youtube.com/shorts/DQNL2b1lxWs
+[2026-08-22 16:47:05] [8/30] Processing https://www.facebook.com/reel/604218335026659/
+[2026-08-22 16:47:05] Processing https://www.facebook.com/reel/604218335026659/ -> 'Pure Talent 298' scheduled 2026-10-04 09:00:00
+[2026-08-22 16:47:10]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\604218335026659.mp4
+[2026-08-22 16:47:10]   19.7s is shorter than the 30s minimum -- skipping this reel entirely (marked 'skipped', not retried).
+[2026-08-22 16:47:10] [9/30] Processing https://www.facebook.com/reel/9826827640755178/
+[2026-08-22 16:47:10] Processing https://www.facebook.com/reel/9826827640755178/ -> 'Pure Talent 298' scheduled 2026-10-04 09:00:00
+[2026-08-22 16:47:16]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\9826827640755178.mp4
+[2026-08-22 16:47:16]   320s exceeds the 178s Shorts limit -- trimming 142.6s off the start to fit.
+[2026-08-22 16:48:19]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\9826827640755178_edited.mp4
+[gemini_meta] title/description generated (gemini-3.5-flash).
+[2026-08-22 16:48:42]   gemini meta: 'Restoring a Rare Vintage Tito-Landi Double Burner Brass Stove'
+[api_uploader] 28% uploaded
+[api_uploader] 57% uploaded
+[api_uploader] 85% uploaded
+[api_uploader] scheduled Restoring a Rare Vintage Tito-Landi Double Burner Brass Stove -> Y8LEfSSwp4g at 2026-10-04T13:00:00Z
+[2026-08-22 16:48:45]   uploaded+scheduled: https://www.youtube.com/shorts/Y8LEfSSwp4g
+[2026-08-22 16:48:45] [10/30] Processing https://www.facebook.com/reel/790215075487342/
+[2026-08-22 16:48:45] Processing https://www.facebook.com/reel/790215075487342/ -> 'Pure Talent 299' scheduled 2026-10-04 14:00:00
+[2026-08-22 16:48:50]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\790215075487342.mp4
+[2026-08-22 16:48:50]   1213s exceeds the 178s Shorts limit -- trimming 1035.1s off the start to fit.
+[2026-08-22 16:49:23]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\790215075487342_edited.mp4
+[gemini_meta] title/description generated (gemini-3.1-flash-lite).
+[2026-08-22 16:49:40]   gemini meta: 'DIY Power Generator Assembly'
+[api_uploader] 57% uploaded
+[api_uploader] scheduled DIY Power Generator Assembly -> DzQMtw8mc2g at 2026-10-04T18:00:00Z
+[2026-08-22 16:49:43]   uploaded+scheduled: https://www.youtube.com/shorts/DzQMtw8mc2g
+[2026-08-22 16:49:43] [11/30] Processing https://www.facebook.com/reel/2065779484018221/
+[2026-08-22 16:49:43] Processing https://www.facebook.com/reel/2065779484018221/ -> 'Pure Talent 300' scheduled 2026-10-04 19:00:00
+[2026-08-22 16:49:47]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\2065779484018221.mp4
+[2026-08-22 16:49:47]   14.6s is shorter than the 30s minimum -- skipping this reel entirely (marked 'skipped', not retried).
+[2026-08-22 16:49:47] [12/30] Processing https://www.facebook.com/reel/574950812189759/
+[2026-08-22 16:49:47] Processing https://www.facebook.com/reel/574950812189759/ -> 'Pure Talent 300' scheduled 2026-10-04 19:00:00
+[2026-08-22 16:49:52]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\574950812189759.mp4
+[2026-08-22 16:50:07]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\574950812189759_edited.mp4
+[gemini_meta] title/description generated (gemini-2.5-flash).
+[2026-08-22 16:50:22]   gemini meta: 'Pure skill: Assembling a water pump with precision'
+[api_uploader] 94% uploaded
+[api_uploader] scheduled Pure skill: Assembling a water pump with precision -> ReyG1hxv3Es at 2026-10-04T23:00:00Z
+[2026-08-22 16:50:24]   uploaded+scheduled: https://www.youtube.com/shorts/ReyG1hxv3Es
+[2026-08-22 16:50:24] [13/30] Processing https://www.facebook.com/reel/25477972498567255/
+[2026-08-22 16:50:24] Processing https://www.facebook.com/reel/25477972498567255/ -> 'Pure Talent 301' scheduled 2026-10-05 00:00:00
+[2026-08-22 16:50:30]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\25477972498567255.mp4
+[2026-08-22 16:50:30]   228s exceeds the 178s Shorts limit -- trimming 50.6s off the start to fit.
+[2026-08-22 16:51:44]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\25477972498567255_edited.mp4
+[gemini_meta] title/description generated (gemini-3.7-flash).
+[2026-08-22 16:52:41]   gemini meta: 'Incredible Restoration and Rewinding of a Massive Electric Motor'
+[api_uploader] 28% uploaded
+[api_uploader] 57% uploaded
+[api_uploader] 85% uploaded
+[api_uploader] scheduled Incredible Restoration and Rewinding of a Massive Electric Motor -> uTos9lKkUQY at 2026-10-05T04:00:00Z
+[2026-08-22 16:52:45]   uploaded+scheduled: https://www.youtube.com/shorts/uTos9lKkUQY
+[2026-08-22 16:52:45] Batch finished. succeeded=10 attempted=13 target=10
