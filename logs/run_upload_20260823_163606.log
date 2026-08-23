@@ -1,0 +1,131 @@
+[worker] using YouTube Data API uploader (OAuth token present)
+[worker] running: C:\hostedtoolcache\windows\Python\3.12.10\x64\python.exe D:\a\yt-shorts-worker\yt-shorts-worker\scripts\pipeline.py --batch-size 10 --start-from-csv --max-runtime 270 --channel chromium --yt-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\youtube_cookies.json --fb-cookies D:\a\yt-shorts-worker\yt-shorts-worker\data\facebook_cookies.json --yt-upload-mode api
+[2026-08-23 16:36:06] Upload mode: YouTube Data API (OAuth).
+[2026-08-23 16:36:06] Continuing schedule from CSV: last=2026-10-07 02:00:00 next=2026-10-07 07:00:00
+[2026-08-23 16:36:06] Runtime budget: 270 minutes (deadline set).
+[2026-08-23 16:36:06] Starting batch: target=10 first_schedule=2026-10-07 07:00:00 interval=5:00:00 candidates_available=2042
+[2026-08-23 16:36:06] [1/30] Processing https://www.facebook.com/reel/1020668080488651/
+[2026-08-23 16:36:06] Processing https://www.facebook.com/reel/1020668080488651/ -> 'Pure Talent 312' scheduled 2026-10-07 07:00:00
+[2026-08-23 16:36:12]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1020668080488651.mp4
+[2026-08-23 16:36:26]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1020668080488651_edited.mp4
+Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+[gemini_meta] title/description generated (gemini-3.6-flash).
+[2026-08-23 16:36:44]   gemini meta: 'Watch a Master Craftsman Carve a Tiny Clay Teapot Lid Knob'
+[api_uploader] scheduled Watch a Master Craftsman Carve a Tiny Clay Teapot Lid Knob -> a_WYxmMOXRQ at 2026-10-07T11:00:00Z
+[2026-08-23 16:36:48]   uploaded+scheduled: https://www.youtube.com/shorts/a_WYxmMOXRQ
+[2026-08-23 16:36:48] [2/30] Processing https://www.facebook.com/reel/369257979265730/
+[2026-08-23 16:36:48] Processing https://www.facebook.com/reel/369257979265730/ -> 'Pure Talent 313' scheduled 2026-10-07 12:00:00
+[2026-08-23 16:37:04]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\369257979265730.mp4
+[2026-08-23 16:37:04]   2959s exceeds the 178s Shorts limit -- trimming 2781.7s off the start to fit.
+[2026-08-23 16:37:47]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\369257979265730_edited.mp4
+[gemini_meta] title/description generated (gemini-3.5-flash).
+[2026-08-23 16:38:21]   gemini meta: 'Traditional Rural Cooking: Stir-Frying and Serving a Hearty Family Meal'
+[api_uploader] 39% uploaded
+[api_uploader] 79% uploaded
+[api_uploader] scheduled Traditional Rural Cooking: Stir-Frying and Serving a Hearty Family Meal -> BzeOjH29JDc at 2026-10-07T16:00:00Z
+[2026-08-23 16:38:26]   uploaded+scheduled: https://www.youtube.com/shorts/BzeOjH29JDc
+[2026-08-23 16:38:26] [3/30] Processing https://www.facebook.com/reel/418473274232519/
+[2026-08-23 16:38:26] Processing https://www.facebook.com/reel/418473274232519/ -> 'Pure Talent 314' scheduled 2026-10-07 17:00:00
+[2026-08-23 16:38:33]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\418473274232519.mp4
+[2026-08-23 16:38:33]   252s exceeds the 178s Shorts limit -- trimming 74.5s off the start to fit.
+[2026-08-23 16:39:35]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\418473274232519_edited.mp4
+[gemini_meta] title/description generated (gemini-3.1-flash-lite).
+[2026-08-23 16:40:40]   gemini meta: 'DIY Water Wheel Power Generator'
+[api_uploader] 20% uploaded
+[api_uploader] 40% uploaded
+[api_uploader] 60% uploaded
+[api_uploader] 79% uploaded
+[api_uploader] 99% uploaded
+[api_uploader] scheduled DIY Water Wheel Power Generator -> K1LJZf3Z5FI at 2026-10-07T21:00:00Z
+[2026-08-23 16:40:46]   uploaded+scheduled: https://www.youtube.com/shorts/K1LJZf3Z5FI
+[2026-08-23 16:40:46] [4/30] Processing https://www.facebook.com/reel/1743263149890375/
+[2026-08-23 16:40:46] Processing https://www.facebook.com/reel/1743263149890375/ -> 'Pure Talent 315' scheduled 2026-10-07 22:00:00
+[2026-08-23 16:40:50]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1743263149890375.mp4
+[2026-08-23 16:40:50]   22.2s is shorter than the 30s minimum -- skipping this reel entirely (marked 'skipped', not retried).
+[2026-08-23 16:40:50] [5/30] Processing https://www.facebook.com/reel/954198787679535/
+[2026-08-23 16:40:50] Processing https://www.facebook.com/reel/954198787679535/ -> 'Pure Talent 315' scheduled 2026-10-07 22:00:00
+[2026-08-23 16:40:54]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\954198787679535.mp4
+[2026-08-23 16:40:55]   17.7s is shorter than the 30s minimum -- skipping this reel entirely (marked 'skipped', not retried).
+[2026-08-23 16:40:55] [6/30] Processing https://www.facebook.com/reel/329392799672996/
+[2026-08-23 16:40:55] Processing https://www.facebook.com/reel/329392799672996/ -> 'Pure Talent 315' scheduled 2026-10-07 22:00:00
+[2026-08-23 16:40:59]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\329392799672996.mp4
+[2026-08-23 16:40:59]   288s exceeds the 178s Shorts limit -- trimming 110.5s off the start to fit.
+[2026-08-23 16:41:57]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\329392799672996_edited.mp4
+[gemini_meta] title/description generated (gemini-2.5-flash).
+[2026-08-23 16:43:00]   gemini meta: 'Watch a rusty old film projector brought back to life'
+[api_uploader] 30% uploaded
+[api_uploader] 60% uploaded
+[api_uploader] 89% uploaded
+[api_uploader] scheduled Watch a rusty old film projector brought back to life -> ooRTE_W7q10 at 2026-10-08T02:00:00Z
+[2026-08-23 16:43:05]   uploaded+scheduled: https://www.youtube.com/shorts/ooRTE_W7q10
+[2026-08-23 16:43:05] [7/30] Processing https://www.facebook.com/reel/1303100625318109/
+[2026-08-23 16:43:05] Processing https://www.facebook.com/reel/1303100625318109/ -> 'Pure Talent 316' scheduled 2026-10-08 03:00:00
+[2026-08-23 16:43:12]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1303100625318109.mp4
+[2026-08-23 16:43:12]   201s exceeds the 178s Shorts limit -- trimming 23.5s off the start to fit.
+[2026-08-23 16:44:43]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1303100625318109_edited.mp4
+[gemini_meta] title/description generated (gemini-3.7-flash).
+[2026-08-23 16:45:22]   gemini meta: 'Mastering the Art of Handmade Purple Clay Teapots'
+[api_uploader] 35% uploaded
+[api_uploader] 70% uploaded
+[api_uploader] scheduled Mastering the Art of Handmade Purple Clay Teapots -> Yu77a1pzP0s at 2026-10-08T07:00:00Z
+[2026-08-23 16:45:27]   uploaded+scheduled: https://www.youtube.com/shorts/Yu77a1pzP0s
+[2026-08-23 16:45:27] [8/30] Processing https://www.facebook.com/reel/553761123448342/
+[2026-08-23 16:45:27] Processing https://www.facebook.com/reel/553761123448342/ -> 'Pure Talent 317' scheduled 2026-10-08 08:00:00
+[2026-08-23 16:45:32]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\553761123448342.mp4
+[2026-08-23 16:45:32]   1302s exceeds the 178s Shorts limit -- trimming 1124.2s off the start to fit.
+[2026-08-23 16:46:01]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\553761123448342_edited.mp4
+[gemini_meta] title/description generated (gemini-3.6-flash).
+[2026-08-23 16:46:24]   gemini meta: 'Girl Fixes Engine, Hikes It Up A Mountain & Receives A Goat As Payment'
+[api_uploader] 40% uploaded
+[api_uploader] 80% uploaded
+[api_uploader] scheduled Girl Fixes Engine, Hikes It Up A Mountain & Receives A Goat As Payment -> NZTvA66uytM at 2026-10-08T12:00:00Z
+[2026-08-23 16:46:28]   uploaded+scheduled: https://www.youtube.com/shorts/NZTvA66uytM
+[2026-08-23 16:46:28] [9/30] Processing https://www.facebook.com/reel/9522766941151106/
+[2026-08-23 16:46:28] Processing https://www.facebook.com/reel/9522766941151106/ -> 'Pure Talent 318' scheduled 2026-10-08 13:00:00
+[2026-08-23 16:46:33]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\9522766941151106.mp4
+[2026-08-23 16:46:53]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\9522766941151106_edited.mp4
+[gemini_meta] title/description generated (gemini-3.5-flash).
+[2026-08-23 16:47:06]   gemini meta: 'Incredible Restoration of an Old Submersible Water Pump'
+[api_uploader] 69% uploaded
+[api_uploader] scheduled Incredible Restoration of an Old Submersible Water Pump -> w5J5dNLcYq0 at 2026-10-08T17:00:00Z
+[2026-08-23 16:47:10]   uploaded+scheduled: https://www.youtube.com/shorts/w5J5dNLcYq0
+[2026-08-23 16:47:10] [10/30] Processing https://www.facebook.com/reel/2564874340554609/
+[2026-08-23 16:47:10] Processing https://www.facebook.com/reel/2564874340554609/ -> 'Pure Talent 319' scheduled 2026-10-08 18:00:00
+[2026-08-23 16:47:14]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\2564874340554609.mp4
+[2026-08-23 16:47:14]   20.4s is shorter than the 30s minimum -- skipping this reel entirely (marked 'skipped', not retried).
+[2026-08-23 16:47:14] [11/30] Processing https://www.facebook.com/reel/1657728548264235/
+[2026-08-23 16:47:14] Processing https://www.facebook.com/reel/1657728548264235/ -> 'Pure Talent 319' scheduled 2026-10-08 18:00:00
+[2026-08-23 16:47:18]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1657728548264235.mp4
+[2026-08-23 16:47:36]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1657728548264235_edited.mp4
+[gemini_meta] title/description generated (gemini-3.1-flash-lite).
+[2026-08-23 16:47:49]   gemini meta: 'Woman Builds an Entire Wooden Cabin From Scratch'
+[api_uploader] 77% uploaded
+[api_uploader] scheduled Woman Builds an Entire Wooden Cabin From Scratch -> Bwnrd9U8LA0 at 2026-10-08T22:00:00Z
+[2026-08-23 16:47:53]   uploaded+scheduled: https://www.youtube.com/shorts/Bwnrd9U8LA0
+[2026-08-23 16:47:53] [12/30] Processing https://www.facebook.com/reel/1038297173564226/
+[2026-08-23 16:47:53] Processing https://www.facebook.com/reel/1038297173564226/ -> 'Pure Talent 320' scheduled 2026-10-08 23:00:00
+[2026-08-23 16:47:57]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\1038297173564226.mp4
+[2026-08-23 16:47:57]   279s exceeds the 178s Shorts limit -- trimming 101.4s off the start to fit.
+[2026-08-23 16:49:06]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\1038297173564226_edited.mp4
+[gemini_meta] title/description generated (gemini-2.5-flash).
+[2026-08-23 16:49:55]   gemini meta: 'From Raw Metal to Razor Sharp Blade: Incredible Sword Making'
+[api_uploader] 23% uploaded
+[api_uploader] 45% uploaded
+[api_uploader] 68% uploaded
+[api_uploader] 90% uploaded
+[api_uploader] scheduled From Raw Metal to Razor Sharp Blade: Incredible Sword Making -> _1qvBhtJ2v4 at 2026-10-09T03:00:00Z
+[2026-08-23 16:50:01]   uploaded+scheduled: https://www.youtube.com/shorts/_1qvBhtJ2v4
+[2026-08-23 16:50:01] [13/30] Processing https://www.facebook.com/reel/653540013677365/
+[2026-08-23 16:50:01] Processing https://www.facebook.com/reel/653540013677365/ -> 'Pure Talent 321' scheduled 2026-10-09 04:00:00
+[2026-08-23 16:50:06]   downloaded: D:\a\yt-shorts-worker\yt-shorts-worker\downloads\653540013677365.mp4
+[2026-08-23 16:50:06]   238s exceeds the 178s Shorts limit -- trimming 60.3s off the start to fit.
+[2026-08-23 16:51:08]   edited: D:\a\yt-shorts-worker\yt-shorts-worker\edited\653540013677365_edited.mp4
+[gemini_meta] gemini-3.7-flash busy -- retrying in 40s
+[gemini_meta] title/description generated (gemini-3.6-flash).
+[2026-08-23 16:53:47]   gemini meta: 'Girl Restores An Old Broken Motorcycle From Scratch'
+[api_uploader] 27% uploaded
+[api_uploader] 53% uploaded
+[api_uploader] 80% uploaded
+[api_uploader] scheduled Girl Restores An Old Broken Motorcycle From Scratch -> oYDdlFcNy74 at 2026-10-09T08:00:00Z
+[2026-08-23 16:53:52]   uploaded+scheduled: https://www.youtube.com/shorts/oYDdlFcNy74
+[2026-08-23 16:53:52] Batch finished. succeeded=10 attempted=13 target=10
